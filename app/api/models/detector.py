@@ -2,6 +2,8 @@ from tortoise.models import Model
 from tortoise import fields
 from tortoise.contrib.pydantic import pydantic_model_creator
 from tortoise.contrib.fastapi import register_tortoise
+from pydantic import BaseModel
+from typing import Optional
 
 class Detector(Model):
     id= fields.IntField(pk=True)
@@ -10,9 +12,18 @@ class Detector(Model):
     city= fields.CharField(max_length=100, nullable=False)
     subDistrict= fields.CharField(max_length=100)
     ward= fields.CharField(max_length=100)
-    roadImagePath= fields.CharField(max_length=1000, nullable=False)
-    description= fields.CharField(max_length=2000, nullable=False)
+    roadImagePath= fields.CharField(max_length=1000)
+    description= fields.CharField(max_length=2000)
     # status= // Later ...
+
+class DetectorIn(BaseModel):
+    roadName: str
+    province: str
+    city: str
+    subDistrict: Optional[str] = None
+    ward: Optional[str] = None
+    roadImagePath: Optional[str] = None
+    description: Optional[str] = None
     
 class Detection(Model):
     id= fields.IntField(pk=True)
