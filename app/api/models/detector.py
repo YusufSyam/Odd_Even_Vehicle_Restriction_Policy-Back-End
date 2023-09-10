@@ -7,13 +7,24 @@ from typing import Optional
 
 class Detector(Model):
     id= fields.IntField(pk=True)
-    roadName= fields.CharField(max_length=200, nullable=False)
+    roadName= fields.CharField(max_length=200, nullable=False, unique=True)
     province= fields.CharField(max_length=100, nullable=False)
     city= fields.CharField(max_length=100, nullable=False)
     subDistrict= fields.CharField(max_length=100)
     ward= fields.CharField(max_length=100)
     roadImagePath= fields.CharField(max_length=1000)
     description= fields.CharField(max_length=2000)
+
+class DetectorWImage(Model):
+    id= fields.IntField(pk=True)
+    roadName= fields.CharField(max_length=200, nullable=False, unique=True)
+    province= fields.CharField(max_length=100, nullable=False)
+    city= fields.CharField(max_length=100, nullable=False)
+    subDistrict= fields.CharField(max_length=100)
+    ward= fields.CharField(max_length=100)
+    description= fields.CharField(max_length=2000)
+    # imageBase64= fields.CharField(max_length=4294967294)
+    imageBase64= fields.TextField()
     # status= // Later ...
 
 class DetectorIn(BaseModel):
@@ -45,6 +56,7 @@ detection_pydantic= pydantic_model_creator(Detection, name="Detection")
 detection_details_pydantic= pydantic_model_creator(DetectionDetails, name="DetectionDetails")
 
 detector_pydantic_in= pydantic_model_creator(Detector, name="DetectorIn", exclude_readonly= True)
+detector_pydantic_in_wimage= pydantic_model_creator(DetectorWImage, name="DetectorInWImage", exclude_readonly= True)
 detection_pydantic_in= pydantic_model_creator(Detection, name="DetectionIn", exclude_readonly= True)
 detection_details_pydantic_in= pydantic_model_creator(DetectionDetails, name="DetectionDetailsIn", exclude_readonly= True)
 

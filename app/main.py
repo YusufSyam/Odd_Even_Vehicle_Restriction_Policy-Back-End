@@ -1,9 +1,21 @@
-from fastapi import FastAPI, Path, Header, Body
+from fastapi import FastAPI, Path, Header, Body, File, UploadFile
 from app.api.models.detector import *
+from fastapi.responses import FileResponse
+
+# Gambar
+import base64
+from io import BytesIO
+import PIL.Image
+from IPython.display import display
+import os
+
+import re
 
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+image_folder = "images"
 
 # CORS
 app.add_middleware(
@@ -23,13 +35,38 @@ def index():
     return {"key": "Hello World"}
 
 @app.post('/detector')
-async def add_detector(detector_info:detector_pydantic_in):
-    detector_obj= await Detector.create(**detector_info.dict(exclude_unset=True))
+async def add_detector(detector_info:detector_pydantic_in_wimage):
+    roadName= detector_info.roadName
+    city= detector_info.city
+    description= detector_info.description
+    province= detector_info.province
+    roadName= detector_info.roadName
+    subDistrict= detector_info.subDistrict
+    ward= detector_info.ward
+
+    image_data = base64.b64decode(detector_info.imageBase64)
+    image_name= re.sub(r'\s+', '-', roadName.lower())
+    image_path = f"images/{image_name}.png"
+    with open(image_path, "wb") as image:
+        image.write(image_data)
+
+    detector_data = {
+        "roadName": roadName,
+        "province": province,
+        "city": city,  
+        "subDistrict": subDistrict,
+        "ward": ward,
+        "roadImagePath": f"{roadName}.png",
+        "description": description,
+    }
+
+    detector_obj = await Detector.create(**detector_data)
+
     response= await detector_pydantic.from_tortoise_orm(detector_obj)
 
     return {
         "status":"ok",
-        "data": response
+        "data": "-"
     }
 
 @app .get('/detector/all')
@@ -89,6 +126,7 @@ async def get_detector_card_all():
             "passingVehicleTotal": 149  *int(i.id),
             "trafficConditions": "Macet",
             "notification": 0,
+            "roadImagePath": i.roadImagePath
         }
         
         new_data.append(temp_obj)
@@ -97,3 +135,12 @@ async def get_detector_card_all():
         "status":"ok",
         "data": new_data
     }
+
+@app.get("/get-image/{roadImagePath}")
+async def get_image(roadImagePath: str):
+    image_path = os.path.join(image_folder, roadImagePath)
+
+    if not os.path.isfile(image_path):
+        return {"message": "File not found"}
+
+    return FileResponse(image_path, media_type="image/png")
