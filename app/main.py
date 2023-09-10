@@ -61,8 +61,7 @@ async def add_detector(detector_info:detector_pydantic_in_wimage):
     }
 
     detector_obj = await Detector.create(**detector_data)
-
-    response= await detector_pydantic.from_tortoise_orm(detector_obj)
+    # response= await detector_pydantic.from_tortoise_orm(detector_obj)
 
     return {
         "status":"ok",
