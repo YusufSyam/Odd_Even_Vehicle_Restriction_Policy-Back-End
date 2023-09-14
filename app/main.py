@@ -120,6 +120,20 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
         "data": response
     }
 
+@app.delete('/detector/{detector_id}')
+async def delete_detector(detector_id:int):
+    selected_detector= await Detector.filter(id=detector_id).first()
+    
+    if not selected_detector:
+        raise HTTPException(status_code=404, detail="Detector not found")
+    
+    delete_image_if_exists(selected_detector.roadImagePath)
+    await selected_detector.delete()
+
+    return {
+        "status": "ok"
+    }
+
 @app.get('/detector/card/all')
 async def get_detector_card_all():
     data= await detector_pydantic.from_queryset(Detector.all())
