@@ -1,6 +1,9 @@
 from fastapi import FastAPI, Path, Header, Body, File, UploadFile
 from app.api.models.detector import *
+from app.utils.functions.string import get_unique_image_name
+from app.utils.functions.file import delete_image_if_exists
 from fastapi.responses import FileResponse
+from app.utils.const.const import IMAGE_FOLDER
 
 # Gambar
 import base64
@@ -14,8 +17,6 @@ import re
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
-image_folder = "images"
 
 # CORS
 app.add_middleware(
@@ -35,7 +36,7 @@ def index():
     return {"key": "Hello World"}
 
 @app.post('/detector')
-async def add_detector(detector_info:detector_pydantic_in_wimage):
+async def add_detector(detector_info:detector_pydantic_in):
     roadName= detector_info.roadName
     city= detector_info.city
     description= detector_info.description
@@ -44,9 +45,9 @@ async def add_detector(detector_info:detector_pydantic_in_wimage):
     subDistrict= detector_info.subDistrict
     ward= detector_info.ward
 
-    image_data = base64.b64decode(detector_info.imageBase64)
-    image_name= re.sub(r'\s+', '-', roadName.lower())
-    image_path = f"images/{image_name}.png"
+    image_data = base64.b64decode(detector_info.roadImagePath)
+    image_name= get_unique_image_name(re.sub(r'\s+', '-', roadName.lower()))
+    image_path = f"images/{image_name}"
     with open(image_path, "wb") as image:
         image.write(image_data)
 
@@ -56,16 +57,16 @@ async def add_detector(detector_info:detector_pydantic_in_wimage):
         "city": city,  
         "subDistrict": subDistrict,
         "ward": ward,
-        "roadImagePath": f"{roadName}.png",
+        "roadImagePath": image_name,
         "description": description,
     }
 
     detector_obj = await Detector.create(**detector_data)
-    # response= await detector_pydantic.from_tortoise_orm(detector_obj)
+    response= await detector_pydantic.from_tortoise_orm(detector_obj)
 
     return {
         "status":"ok",
-        "data": "-"
+        "data": response
     }
 
 @app .get('/detector/all')
@@ -96,8 +97,19 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
     detector.province= update_info['province']
     detector.subDistrict= update_info['subDistrict']
     detector.ward= update_info['ward']
-    detector.roadImagePath= update_info['roadImagePath']
     detector.description= update_info['description']
+
+    delete_image_if_exists(detector.roadImagePath)
+
+    image_data = base64.b64decode(update_info['roadImagePath'])
+    image_name= get_unique_image_name(re.sub(r'\s+', '-', update_info['roadName'].lower()))
+    image_path = f"images/{image_name}"
+
+    with open(image_path, "wb") as image:
+        image.write(image_data)
+
+    detector.roadImagePath= image_name
+    print('Bikin Baru',detector.roadImagePath)
 
     await detector.save()
 
@@ -137,9 +149,9 @@ async def get_detector_card_all():
 
 @app.get("/get-image/{roadImagePath}")
 async def get_image(roadImagePath: str):
-    image_path = os.path.join(image_folder, roadImagePath)
+    image_path = os.path.join(IMAGE_FOLDER, roadImagePath)
 
-    if not os.path.isfile(image_path):
+    if not os.path.isfile(image_path):  
         return {"message": "File not found"}
 
     return FileResponse(image_path, media_type="image/png")
