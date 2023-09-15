@@ -11,8 +11,6 @@ from app.routers import detector_router, detection_router
 # Gambar
 import base64
 from io import BytesIO
-import PIL.Image
-from IPython.display import display
 import os
 
 import re
@@ -38,7 +36,7 @@ async def startup_db():
         app,
         db_url='mysql://root@127.0.0.1:3307/oevrp',
         modules={'models': ['app.models.detection_model',
-                            'app.models.detector_model', 'app.models.detection_details_model']},
+                            'app.models.detector_model']},
         generate_schemas=True,
         add_exception_handlers=True
     )

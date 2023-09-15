@@ -12,8 +12,12 @@ class Detection(Model):
     detector= fields.ForeignKeyField('models.Detector', related_name='detector', nullable=False)
     fullPlateNumber= fields.CharField(max_length=20, nullable=False)
     timeDetected= fields.DatetimeField()
+    plateNumber= fields.IntField(max_length=10, nullable=False)
+    imagePath= fields.TextField()
+    isViolating= fields.BooleanField(nullable=False)
+    plateType= fields.CharField(max_length=10, nullable=False)
+    policyAtTheMoment= fields.CharField(max_length=10, nullable=False)
 
   
 detection_pydantic= pydantic_model_creator(Detection, name="Detection")
-detection_pydantic_in= pydantic_model_creator(Detection, name="DetectionIn", exclude_readonly= True)
-detection_pydantic_wtime= pydantic_model_creator(Detection, name="DetectionWTime", exclude=['timeDetected'], exclude_readonly= True)
+detection_pydantic_in= pydantic_model_creator(Detection, name="DetectionIn", exclude_readonly= True, exclude=['timeDetected'])

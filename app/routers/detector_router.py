@@ -1,9 +1,15 @@
 from fastapi import FastAPI, Path, Header, Body, File, UploadFile, APIRouter
-from app.utils.functions.string import get_unique_image_name
-from app.utils.functions.file import delete_image_if_exists
 from fastapi.responses import FileResponse
 
 from app.models.detector_model import *
+
+from app.utils.functions.string import get_unique_image_name
+from app.utils.functions.file import delete_image_if_exists
+from app.utils.const.directory import ROAD_IMAGE_FOLDER
+
+import base64
+from io import BytesIO
+import os
 
 import re
 
@@ -23,7 +29,7 @@ async def add_detector(detector_info:detector_pydantic_in):
 
     image_data = base64.b64decode(detector_info.roadImagePath)
     image_name= get_unique_image_name(re.sub(r'\s+', '-', roadName.lower()))
-    image_path = f"images/{image_name}"
+    image_path = f"{ROAD_IMAGE_FOLDER}/{image_name}"
     with open(image_path, "wb") as image:
         image.write(image_data)
 
