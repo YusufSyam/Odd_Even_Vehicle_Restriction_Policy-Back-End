@@ -6,7 +6,7 @@ from app.utils.const.directory import ROAD_IMAGE_FOLDER
 from tortoise.contrib.fastapi import register_tortoise
 
 # Router
-from app.routers import detector_router
+from app.routers import detector_router, detection_router
 
 # Gambar
 import base64
@@ -50,6 +50,7 @@ def index():
 
 
 app.include_router(detector_router.router)
+app.include_router(detection_router.router)
 
 
 @app.get("/get-image/{roadImagePath}")
