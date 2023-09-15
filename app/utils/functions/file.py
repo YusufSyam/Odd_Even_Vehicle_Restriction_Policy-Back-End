@@ -1,8 +1,7 @@
-from app.utils.const.const import IMAGE_FOLDER
 import os
 
-def delete_image_if_exists(image_name):
-    file_path= f'{os.path.join(IMAGE_FOLDER, image_name)}'
+def delete_image_if_exists(image_dir, image_name):
+    file_path= f'{os.path.join(image_dir, image_name)}'
     if os.path.exists(file_path):
         try:
             os.remove(file_path)

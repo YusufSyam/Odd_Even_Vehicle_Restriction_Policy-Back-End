@@ -2,7 +2,7 @@ from fastapi import FastAPI, Path, Header, Body, File, UploadFile
 from app.utils.functions.string import get_unique_image_name
 from app.utils.functions.file import delete_image_if_exists
 from fastapi.responses import FileResponse
-from app.utils.const.const import IMAGE_FOLDER
+from app.utils.const.directory import ROAD_IMAGE_FOLDER
 from tortoise.contrib.fastapi import register_tortoise
 
 # Router
@@ -54,7 +54,7 @@ app.include_router(detector_router.router)
 
 @app.get("/get-image/{roadImagePath}")
 async def get_image(roadImagePath: str):
-    image_path = os.path.join(IMAGE_FOLDER, roadImagePath)
+    image_path = os.path.join(ROAD_IMAGE_FOLDER, roadImagePath)
 
     if not os.path.isfile(image_path):
         return {"message": "File not found"}

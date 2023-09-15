@@ -1,1 +1,0 @@
-IMAGE_FOLDER = "images"

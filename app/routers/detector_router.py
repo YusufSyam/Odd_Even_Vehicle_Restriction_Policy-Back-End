@@ -4,7 +4,6 @@ from app.utils.functions.file import delete_image_if_exists
 from fastapi.responses import FileResponse
 
 from app.models.detector_model import *
-from app.utils.const.const import IMAGE_FOLDER
 
 import re
 
@@ -76,7 +75,7 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
     detector.ward= update_info['ward']
     detector.description= update_info['description']
 
-    delete_image_if_exists(detector.roadImagePath)
+    delete_image_if_exists(ROAD_IMAGE_FOLDER, detector.roadImagePath)
 
     image_data = base64.b64decode(update_info['roadImagePath'])
     image_name= get_unique_image_name(re.sub(r'\s+', '-', update_info['roadName'].lower()))
@@ -104,7 +103,7 @@ async def delete_detector(detector_id:int):
     if not selected_detector:
         raise HTTPException(status_code=404, detail="Detector not found")
     
-    delete_image_if_exists(selected_detector.roadImagePath)
+    delete_image_if_exists(ROAD_IMAGE_FOLDER, selected_detector.roadImagePath)
     await selected_detector.delete()
 
     return {
