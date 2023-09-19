@@ -8,6 +8,8 @@ from tortoise.expressions import Q
 from app.models.detection_model import *
 
 from app.utils.const.directory import DETECTION_IMAGE_FOLDER
+from app.utils.functions.string import get_unique_image_name
+from app.utils.functions.date import parse_date_detection
 
 import base64
 from io import BytesIO
@@ -31,8 +33,8 @@ async def get_detection_all():
     }
 
 
-@router.post('/{detector_id}')
-async def add_detection(detector_id: int, detection_info: detection_pydantic_in):
+@router.post('/{detector_id}/{detection_date}')
+async def add_detection(detector_id: int, detection_date:str, detection_info: detection_pydantic_in):
     detector_ref = await Detector.get(id=detector_id)
     fullPlateNumber = detection_info.fullPlateNumber
     plateNumber = detection_info.plateNumber
@@ -41,7 +43,7 @@ async def add_detection(detector_id: int, detection_info: detection_pydantic_in)
     policyAtTheMoment = detection_info.policyAtTheMoment
 
     image_data = base64.b64decode(detection_info.imagePath)
-    image_name = f'{detector_id}-{fullPlateNumber}-{timeDetected.microsecond}.png'
+    image_name = get_unique_image_name(f'{detector_id}-{fullPlateNumber}')
     image_path = f"{DETECTION_IMAGE_FOLDER}/{image_name}"
     with open(image_path, "wb") as image:
         image.write(image_data)
@@ -52,7 +54,8 @@ async def add_detection(detector_id: int, detection_info: detection_pydantic_in)
         "isViolating": isViolating,
         "plateType": plateType,
         "policyAtTheMoment": policyAtTheMoment,
-        "imagePath": image_name
+        "imagePath": image_name,
+        "detectionDate": parse_date_detection(detection_date)
     }
 
     detection_obj = await Detection.create(**detection_data, detector=detector_ref)
