@@ -34,7 +34,7 @@ async def startup_db():
     # init_db(app)
     register_tortoise(
         app,
-        db_url='mysql://root@127.0.0.1:3306/oevrp',
+        db_url='mysql://root@127.0.0.1:3307/oevrp',
         modules={'models': ['app.models.detection_model',
                             'app.models.detector_model']},
         generate_schemas=True,

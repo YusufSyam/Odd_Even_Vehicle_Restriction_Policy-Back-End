@@ -78,6 +78,20 @@ async def get_detection_by_detector(detector_id: int):
         "data": response
     }
 
+@router.delete('/{detection_id}')
+async def delete_detection(detection_id: int):
+    selected_detection = await Detection.filter(id=detection_id).first()
+
+    if not selected_detection:
+        raise HTTPException(status_code=404, detail="Detection not found")
+
+    delete_image_if_exists(DETECTION_IMAGE_FOLDER, selected_detection.imagePath)
+    await selected_detection.delete()
+
+    return {
+        "status": "ok"
+    }
+
 
 @router.get('/{detector_id}/{date}')
 async def get_detection_by_detector_time(detector_id: int, date: str):
