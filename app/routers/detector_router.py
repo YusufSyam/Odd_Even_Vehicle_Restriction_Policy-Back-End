@@ -3,10 +3,11 @@ from fastapi.responses import FileResponse
 
 from tortoise import Tortoise
 from app.models.detector_model import *
+from app.models.detection_model import Detection
 
 from app.utils.functions.string import get_unique_image_name
 from app.utils.functions.file import delete_image_if_exists
-from app.utils.const.directory import ROAD_IMAGE_FOLDER
+from app.utils.const.directory import ROAD_IMAGE_FOLDER, DETECTION_IMAGE_FOLDER
 
 import base64
 from io import BytesIO
@@ -113,11 +114,19 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
 async def delete_detector(detector_id: int):
     selected_detector = await Detector.filter(id=detector_id).first()
 
-    if not selected_detector:
-        raise HTTPException(status_code=404, detail="Detector not found")
+    if selected_detector:
+        related_detections= await Detection.filter(detector_id=selected_detector.id)
 
-    delete_image_if_exists(ROAD_IMAGE_FOLDER, selected_detector.roadImagePath)
-    await selected_detector.delete()
+        for detection in related_detections:
+            print(f"Deleting Detection ID: {detection.id}")
+            
+            delete_image_if_exists(DETECTION_IMAGE_FOLDER, detection.imagePath)
+            await detection.delete()
+        
+        delete_image_if_exists(ROAD_IMAGE_FOLDER, selected_detector.roadImagePath)
+        await selected_detector.delete()
+    else:
+        raise HTTPException(status_code=404, detail="Detector not found")
 
     return {
         "status": "ok"
