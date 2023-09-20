@@ -132,6 +132,40 @@ async def delete_detector(detector_id: int):
         "status": "ok"
     }
 
+@router.get('/card/all/{query_date}')
+async def get_detector_card_all(query_date:str):
+    data = await detector_pydantic.from_queryset(Detector.all())
+
+    new_data = []
+
+    for i in data:
+        detectedViolatorTotal_query = f"SELECT COUNT(*) AS detectedViolatorTotal FROM `detection` WHERE detector_id={i.id} and isViolating=TRUE and detectionDate='{query_date}'"
+        temp_detectedViolatorTotal = await Tortoise.get_connection("default").execute_query(detectedViolatorTotal_query)
+        detectedViolatorTotal = list(temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
+
+        passingVehicleTotal_query = f"SELECT COUNT(*) AS passingVehicleTotal FROM `detection` WHERE detector_id={i.id} and detectionDate='{query_date}'"
+        temp_passingVehicleTotal = await Tortoise.get_connection("default").execute_query(passingVehicleTotal_query)
+        passingVehicleTotal = list(temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+
+        temp_obj = {
+            "id": i.id,
+            "roadName": i.roadName,
+            "province": i.province,
+            "city": i.city,
+            "status": "Aktif",
+            "detectedViolatorTotal": detectedViolatorTotal,
+            "passingVehicleTotal": passingVehicleTotal,
+            "trafficConditions": "Macet",
+            "notification": 0,
+            "roadImagePath": i.roadImagePath
+        }
+
+        new_data.append(temp_obj)
+
+    return {
+        "status": "ok",
+        "data": new_data
+    }
 
 @router.get('/card/all')
 async def get_detector_card_all():
@@ -140,14 +174,22 @@ async def get_detector_card_all():
     new_data = []
 
     for i in data:
+        detectedViolatorTotal_query = f"SELECT COUNT(*) AS detectedViolatorTotal FROM `detection` WHERE detector_id={i.id} and isViolating=TRUE"
+        temp_detectedViolatorTotal = await Tortoise.get_connection("default").execute_query(detectedViolatorTotal_query)
+        detectedViolatorTotal = list(temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
+
+        passingVehicleTotal_query = f"SELECT COUNT(*) AS passingVehicleTotal FROM `detection` WHERE detector_id={i.id}"
+        temp_passingVehicleTotal = await Tortoise.get_connection("default").execute_query(passingVehicleTotal_query)
+        passingVehicleTotal = list(temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+
         temp_obj = {
             "id": i.id,
             "roadName": i.roadName,
             "province": i.province,
             "city": i.city,
             "status": "Aktif",
-            "detectedViolatorTotal": 53*int(i.id)-int(i.id),
-            "passingVehicleTotal": 149 * int(i.id),
+            "detectedViolatorTotal": detectedViolatorTotal,
+            "passingVehicleTotal": passingVehicleTotal,
             "trafficConditions": "Macet",
             "notification": 0,
             "roadImagePath": i.roadImagePath
