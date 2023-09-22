@@ -32,6 +32,17 @@ async def get_detection_all():
         "data": response
     }
 
+@router.get('/newest')
+async def get_detection_newest():
+    response = await Detection.filter().order_by(
+        '-detectionDate', '-detectionTime'
+    )
+
+    return {
+        "status": "ok",
+        "data": response
+    }
+
 
 @router.post('/{detector_id}/{detection_date}')
 async def add_detection(detector_id: int, detection_date:str, detection_info: detection_pydantic_in):
