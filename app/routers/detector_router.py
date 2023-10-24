@@ -115,15 +115,16 @@ async def delete_detector(detector_id: int):
     selected_detector = await Detector.filter(id=detector_id).first()
 
     if selected_detector:
-        related_detections= await Detection.filter(detector_id=selected_detector.id)
+        related_detections = await Detection.filter(detector_id=selected_detector.id)
 
         for detection in related_detections:
             print(f"Deleting Detection ID: {detection.id}")
-            
+
             delete_image_if_exists(DETECTION_IMAGE_FOLDER, detection.imagePath)
             await detection.delete()
-        
-        delete_image_if_exists(ROAD_IMAGE_FOLDER, selected_detector.roadImagePath)
+
+        delete_image_if_exists(
+            ROAD_IMAGE_FOLDER, selected_detector.roadImagePath)
         await selected_detector.delete()
     else:
         raise HTTPException(status_code=404, detail="Detector not found")
@@ -132,8 +133,9 @@ async def delete_detector(detector_id: int):
         "status": "ok"
     }
 
+
 @router.get('/card/all/{query_date}')
-async def get_detector_card_all(query_date:str):
+async def get_detector_card_all_by_date(query_date: str):
     data = await detector_pydantic.from_queryset(Detector.all())
 
     new_data = []
@@ -141,11 +143,15 @@ async def get_detector_card_all(query_date:str):
     for i in data:
         detectedViolatorTotal_query = f"SELECT COUNT(*) AS detectedViolatorTotal FROM `detection` WHERE detector_id={i.id} and isViolating=TRUE and detectionDate='{query_date}'"
         temp_detectedViolatorTotal = await Tortoise.get_connection("default").execute_query(detectedViolatorTotal_query)
-        detectedViolatorTotal = list(temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
+        detectedViolatorTotal = list(
+            temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
 
         passingVehicleTotal_query = f"SELECT COUNT(*) AS passingVehicleTotal FROM `detection` WHERE detector_id={i.id} and detectionDate='{query_date}'"
         temp_passingVehicleTotal = await Tortoise.get_connection("default").execute_query(passingVehicleTotal_query)
-        passingVehicleTotal = list(temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+        passingVehicleTotal = list(
+            temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+
+        latest_detections = await Detection.filter(detector=i.id).order_by('-detectionDate', '-detectionTime').limit(4)
 
         temp_obj = {
             "id": i.id,
@@ -157,7 +163,8 @@ async def get_detector_card_all(query_date:str):
             "passingVehicleTotal": passingVehicleTotal,
             "trafficConditions": "Macet",
             "notification": 0,
-            "roadImagePath": i.roadImagePath
+            "roadImagePath": i.roadImagePath,
+            "latestDetectionsImagePath": [d.imagePath for d in latest_detections]
         }
 
         new_data.append(temp_obj)
@@ -166,6 +173,7 @@ async def get_detector_card_all(query_date:str):
         "status": "ok",
         "data": new_data
     }
+
 
 @router.get('/card/all')
 async def get_detector_card_all():
@@ -176,11 +184,16 @@ async def get_detector_card_all():
     for i in data:
         detectedViolatorTotal_query = f"SELECT COUNT(*) AS detectedViolatorTotal FROM `detection` WHERE detector_id={i.id} and isViolating=TRUE"
         temp_detectedViolatorTotal = await Tortoise.get_connection("default").execute_query(detectedViolatorTotal_query)
-        detectedViolatorTotal = list(temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
+        detectedViolatorTotal = list(
+            temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
+        print('detectedViolatorTotal_query: ', detectedViolatorTotal_query)
+        print('detectedViolatorTotal: ', detectedViolatorTotal, '\n\n')
 
         passingVehicleTotal_query = f"SELECT COUNT(*) AS passingVehicleTotal FROM `detection` WHERE detector_id={i.id}"
         temp_passingVehicleTotal = await Tortoise.get_connection("default").execute_query(passingVehicleTotal_query)
-        passingVehicleTotal = list(temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+        passingVehicleTotal = list(
+            temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+        latest_detections = await Detection.filter(detector=i.id).order_by('-detectionDate', '-detectionTime').limit(4)
 
         temp_obj = {
             "id": i.id,
@@ -192,7 +205,8 @@ async def get_detector_card_all():
             "passingVehicleTotal": passingVehicleTotal,
             "trafficConditions": "Macet",
             "notification": 0,
-            "roadImagePath": i.roadImagePath
+            "roadImagePath": i.roadImagePath,
+            "latestDetectionsImagePath": [d.imagePath for d in latest_detections]
         }
 
         new_data.append(temp_obj)
@@ -221,7 +235,6 @@ async def get_detection_history_summary_by_detector(detector_id: int):
         "status": "ok",
         "data": response
     }
-
 
 @router.get('/get-min-date/{detector_id}')
 async def get_min_date_of_detector(detector_id: int):

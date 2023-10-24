@@ -1,1 +1,4 @@
 uvicorn app.main:app --host 0.0.0.0 --port 1111 --reload
+
+Implementasi Sistem Deteksi Plat Nomor Ganjil Genap Secara Real Time Berbasis YoloV8
+
