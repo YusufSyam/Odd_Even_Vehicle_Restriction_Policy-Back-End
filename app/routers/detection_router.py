@@ -1,14 +1,15 @@
 from fastapi import FastAPI, Path, Header, Body, File, UploadFile, APIRouter, Form
-from app.utils.functions.string import get_unique_image_name
+from app.utils.functions.string import get_unique_image_name, generate_unique_string
 from app.utils.functions.file import delete_image_if_exists
 from fastapi.responses import FileResponse
 from typing import List
+from tortoise import fields
 
 from tortoise.expressions import Q
 
 from app.models.detection_model import *
 
-from app.utils.const.directory import DETECTION_IMAGE_FOLDER
+from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER
 from app.utils.const.dummy import dummy_new_detection
 from app.utils.functions.string import get_unique_image_name
 from app.utils.functions.date import parse_date_detection
@@ -218,6 +219,18 @@ async def get_detection_image_list():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@router.get("/get-temporary-image-list/")
+async def get_temporary_image_list():
+    try:
+        image_list = [file for file in os.listdir(TEMPORARY_IMAGE_FOLDER) if file.lower(
+        ).endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+
+        return {
+            "status": "ok",
+            "data": image_list
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @router.delete('/delete-detection-image/{image_path}')
 async def delete_detection_image(image_path: str):
@@ -227,6 +240,44 @@ async def delete_detection_image(image_path: str):
         "status": f'Image {image_path} succesfully deleted'
     }
 
+@router.delete('/delete-temporary-image/{image_path}')
+async def delete_temp_image(image_path: str):
+    delete_image_if_exists(TEMPORARY_IMAGE_FOLDER, image_path)
+
+    return {
+        "status": f'Temporary Image {image_path} succesfully deleted'
+    }
+
+# Jadi di sini nanti akan diganti menjadi langsung diproses 
+@router.post('/upload-temporary-image/')
+async def upload_temporary_image(imageFile: UploadFile = File(...)):
+    # print('file,file',imageFile)
+    # return {"filename": imageFile.filename}
+    image_name = generate_unique_string()[:5]
+    image_path = f"{TEMPORARY_IMAGE_FOLDER}/{image_name}-{imageFile.filename}"
+    with open(image_path, "wb") as image:
+        image.write(imageFile.file.read())
+
+    print(f'Temporary image {image_path} succesfully uploaded')
+
+    return {
+        "status": f'Temporary image {image_path} succesfully uploaded'
+    }
+
+# @router.post('/upload-temporary-image/')
+# async def upload_detection_image(image_path: str, image_name: str):
+#     image_data = base64.b64decode(image_path)
+
+#     if image_name is None or len(image_name) == 0:
+#         image_name = generate_unique_string()
+
+#     image_path = f"{TEMPORARY_IMAGE_FOLDER}/{image_name}"
+#     with open(image_path, "wb") as image:
+#         image.write(image_data)
+
+#     return {
+#         "status": f'Temporary image {image_path} succesfully uploaded'
+#     }
 
 @router.post("/print-type/")
 async def print_data_type(data: str):
