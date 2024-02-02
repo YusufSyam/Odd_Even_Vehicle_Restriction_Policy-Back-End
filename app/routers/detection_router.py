@@ -83,9 +83,9 @@ async def add_detection(detector_id: int, detection_date: str, detection_info: d
 
 @router.post('/manual-detection/{detector_id}/{detection_date}')
 async def add_manual_detection(detector_id: int, detection_date: str, detection_info_list: List[detection_pydantic_in]):
-    new_detections= []
+    new_detections = []
     detector_ref = await Detector.get(id=detector_id)
-    detection_date_parsed= parse_date_detection(detection_date)
+    detection_date_parsed = parse_date_detection(detection_date)
 
     print(detection_info_list)
     for detection_info in detection_info_list:
@@ -95,10 +95,10 @@ async def add_manual_detection(detector_id: int, detection_date: str, detection_
             isViolating = detection_info.isViolating
             plateType = detection_info.plateType
             policyAtTheMoment = detection_info.policyAtTheMoment
-            image_name= detection_info.imagePath
-            
-            ### Di sini nanti bikin fungsi yang kasi pindah gambar dari temp manual detection folder ke images/detection
-            ### temp manual detection folder itu folder pas manual deteksi yang akan dibersihkan dalam 12 jam
+            image_name = detection_info.imagePath
+
+            # Di sini nanti bikin fungsi yang kasi pindah gambar dari temp manual detection folder ke images/detection
+            # temp manual detection folder itu folder pas manual deteksi yang akan dibersihkan dalam 12 jam
             # image_data = base64.b64decode(detection_info.imagePath)
             # image_name = get_unique_image_name(f'{detector_id}-{fullPlateNumber}')
             # image_path = f"{DETECTION_IMAGE_FOLDER}/{image_name}"
@@ -123,7 +123,7 @@ async def add_manual_detection(detector_id: int, detection_date: str, detection_
             error_message = f"Failed to add detector: {str(e)}"
             return HTTPException(status_code=400, detail=error_message)
 
-    response= detection_info_list
+    response = detection_info_list
     return {
         "status": "ok",
         "response": response
@@ -203,3 +203,31 @@ async def upload_manual_detection_file(
         "status": "ok",
         "data": response
     }
+
+
+@router.get("/get-detection-image-list/")
+async def get_detection_image_list():
+    try:
+        image_list = [file for file in os.listdir(DETECTION_IMAGE_FOLDER) if file.lower(
+        ).endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+
+        return {
+            "status": "ok",
+            "data": image_list
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.delete('/delete-detection-image/{image_path}')
+async def delete_detection_image(image_path: str):
+    delete_image_if_exists(DETECTION_IMAGE_FOLDER, image_path)
+
+    return {
+        "status": f'Image {image_path} succesfully deleted'
+    }
+
+
+@router.post("/print-type/")
+async def print_data_type(data: str):
+    return {"data_type": str(type(data).__name__), "data_value": data}

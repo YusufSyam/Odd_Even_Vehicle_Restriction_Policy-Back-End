@@ -92,7 +92,7 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
     image_data = base64.b64decode(update_info['roadImagePath'])
     image_name = get_unique_image_name(
         re.sub(r'\s+', '-', update_info['roadName'].lower()))
-    image_path = f"images/{image_name}"
+    image_path = f"{ROAD_IMAGE_FOLDER}/{image_name}"
 
     with open(image_path, "wb") as image:
         image.write(image_data)
@@ -200,7 +200,8 @@ async def get_detector_card_all():
             "roadName": i.roadName,
             "province": i.province,
             "city": i.city,
-            "status": "Aktif",
+            # "status": "Aktif",
+            "status": "Aktif" if i.id !=32 else "NonAktif",
             "detectedViolatorTotal": detectedViolatorTotal,
             "passingVehicleTotal": passingVehicleTotal,
             "trafficConditions": "Macet",
