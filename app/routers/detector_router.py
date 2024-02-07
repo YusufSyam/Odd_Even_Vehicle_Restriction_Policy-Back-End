@@ -25,16 +25,13 @@ async def add_detector(detector_info: detector_pydantic_in):
     roadName = detector_info.roadName
     city = detector_info.city
     description = detector_info.description
-    province = detector_info.province
+    province = detector_info.province   
     roadName = detector_info.roadName
     subDistrict = detector_info.subDistrict
     ward = detector_info.ward
 
-    image_data = base64.b64decode(detector_info.roadImagePath)
-    image_name = get_unique_image_name(re.sub(r'\s+', '-', roadName.lower()))
-    image_path = f"{ROAD_IMAGE_FOLDER}/{image_name}"
-    with open(image_path, "wb") as image:
-        image.write(image_data)
+    image_name = get_unique_image_name(re.sub(r'\s+', '-', roadName.lower()))        
+    decode_and_save_image(detector_info.roadImagePath, image_name, ROAD_IMAGE_FOLDER)
 
     detector_data = {
         "roadName": roadName,
@@ -89,13 +86,9 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
 
     delete_image_if_exists(ROAD_IMAGE_FOLDER, detector.roadImagePath)
 
-    image_data = base64.b64decode(update_info['roadImagePath'])
     image_name = get_unique_image_name(
         re.sub(r'\s+', '-', update_info['roadName'].lower()))
-    image_path = f"{ROAD_IMAGE_FOLDER}/{image_name}"
-
-    with open(image_path, "wb") as image:
-        image.write(image_data)
+    decode_and_save_image(update_info['roadImagePath'], image_name, ROAD_IMAGE_FOLDER)
 
     detector.roadImagePath = image_name
     print('Bikin Baru', detector.roadImagePath)

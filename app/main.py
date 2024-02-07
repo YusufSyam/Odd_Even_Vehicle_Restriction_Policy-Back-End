@@ -67,6 +67,8 @@ async def get_detection_image(detectionImagePath: str):
     if not os.path.isfile(image_path):
         return {"message": "File not found"}
 
+    return FileResponse(image_path, media_type="image/png")
+
 @app.get("/get-temporary-image/{temporaryImagePath}")
 async def get_temporary_image(temporaryImagePath: str):
     image_path = os.path.join(TEMPORARY_IMAGE_FOLDER, temporaryImagePath)

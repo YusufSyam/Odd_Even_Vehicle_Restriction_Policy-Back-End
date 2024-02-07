@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 def parse_date_detection(date_string:str):
     try:
         if date_string is None or date_string.strip() == "":
@@ -9,3 +10,9 @@ def parse_date_detection(date_string:str):
             return tanggal_date
     except ValueError:
         return None
+
+def get_current_date():
+    return datetime.now().date()
+
+def get_current_time():
+    return datetime.now().time()

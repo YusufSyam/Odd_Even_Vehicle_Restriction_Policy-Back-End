@@ -1,17 +1,19 @@
 from fastapi import FastAPI, Path, Header, Body, File, UploadFile, APIRouter, Form
-from app.utils.functions.string import get_unique_image_name, generate_unique_string
-from app.utils.functions.file import delete_image_if_exists
 from fastapi.responses import FileResponse
 from typing import List
 from tortoise import fields
+import cv2
 
 from tortoise.expressions import Q
 
 from app.models.detection_model import *
 
+from app.detect.detect import get_dummy_detection
+
 from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER
 from app.utils.const.dummy import dummy_new_detection
-from app.utils.functions.string import get_unique_image_name
+from app.utils.functions.string import get_unique_image_name, generate_unique_string
+from app.utils.functions.file import delete_image_if_exists, decode_and_save_image, save_image
 from app.utils.functions.date import parse_date_detection
 
 import base64
@@ -57,12 +59,9 @@ async def add_detection(detector_id: int, detection_date: str, detection_info: d
     plateType = detection_info.plateType
     policyAtTheMoment = detection_info.policyAtTheMoment
 
-    image_data = base64.b64decode(detection_info.imagePath)
     image_name = get_unique_image_name(f'{detector_id}-{fullPlateNumber}')
-    image_path = f"{DETECTION_IMAGE_FOLDER}/{image_name}"
-    with open(image_path, "wb") as image:
-        image.write(image_data)
-
+    decode_and_save_image(detection_info.imagePath, image_name, DETECTION_IMAGE_FOLDER)
+    
     detection_data = {
         "fullPlateNumber": fullPlateNumber,
         "plateNumber": plateNumber,
@@ -249,20 +248,58 @@ async def delete_temp_image(image_path: str):
     }
 
 # Jadi di sini nanti akan diganti menjadi langsung diproses 
+# Ganti nanti nama fungsi nya ini
 @router.post('/upload-temporary-image/')
 async def upload_temporary_image(imageFile: UploadFile = File(...)):
-    # print('file,file',imageFile)
-    # return {"filename": imageFile.filename}
-    image_name = generate_unique_string()[:5]
-    image_path = f"{TEMPORARY_IMAGE_FOLDER}/{image_name}-{imageFile.filename}"
-    with open(image_path, "wb") as image:
-        image.write(imageFile.file.read())
+    print('file,file',imageFile)
+    temp_image_name = f'{generate_unique_string()[:5]}-{imageFile.filename}'
 
-    print(f'Temporary image {image_path} succesfully uploaded')
+    save_image(imageFile.file.read(), temp_image_name, TEMPORARY_IMAGE_FOLDER)
+    
+    temp_image_path = f"{TEMPORARY_IMAGE_FOLDER}/{temp_image_name}"
+    image = cv2.imread(temp_image_path)
+
+    detection_result= get_dummy_detection(image, temp_image_name)
+
+    detector_ref = await Detector.get(id=detection_result['detector_id'])
+
+    result_fullPlateNumber = detection_result['fullPlateNumber']
+    result_plateNumber = detection_result['plateNumber']
+    result_isViolating = detection_result['isViolating']
+    result_plateType = detection_result['plateType']
+    result_policyAtTheMoment = detection_result['policyAtTheMoment']
+    result_detectionDate = detection_result['detectionDate']
+    result_detectionTime = detection_result['detectionTime']
+    result_imagePath = detection_result['imagePath']
+    result_plateImagePath = detection_result['plateImagePath']
+    result_frameImagePath = detection_result['frameImagePath']
+    
+    detection_data = {
+        "fullPlateNumber": result_fullPlateNumber,
+        "plateNumber": result_plateNumber,
+        "isViolating": result_isViolating,
+        "plateType": result_plateType,
+        "policyAtTheMoment": result_policyAtTheMoment,
+        "detectionDate": result_detectionDate,
+        "detectionTime": result_detectionTime,
+        "imagePath": result_imagePath,
+        "plateImagePath": result_plateImagePath,
+        "frameImagePath": result_frameImagePath,
+    }
+
+    detection_obj = await Detection.create(**detection_data, detector=detector_ref)
+    response = await detection_pydantic.from_tortoise_orm(detection_obj)
+
+    print('SUCCESS')
 
     return {
-        "status": f'Temporary image {image_path} succesfully uploaded'
+        "status": "ok",
+        "response": response
     }
+
+    # return {
+    #     "status": f'Terjadi Error Saat Pengunggahan Gambar dan Penyimpanan Data'
+    # }
 
 # @router.post('/upload-temporary-image/')
 # async def upload_detection_image(image_path: str, image_name: str):

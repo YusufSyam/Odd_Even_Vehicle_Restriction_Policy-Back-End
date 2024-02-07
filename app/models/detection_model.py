@@ -20,7 +20,12 @@ class Detection(Model):
     detectionDate = fields.DateField(
         default=lambda: datetime.now().date(), null=True)
     plateNumber = fields.IntField(max_length=10, nullable=False)
+    # Gambar Mobil
     imagePath = fields.TextField()
+    # Gambar Plat Kendaraan
+    plateImagePath = fields.TextField()
+    # Gambar Frame / Keseluruhan Gambar
+    frameImagePath = fields.TextField()
     isViolating = fields.BooleanField(nullable=False)
     plateType = fields.CharField(max_length=10, nullable=False)
     policyAtTheMoment = fields.CharField(max_length=10, nullable=False)
