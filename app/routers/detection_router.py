@@ -247,12 +247,13 @@ async def delete_temp_image(image_path: str):
         "status": f'Temporary Image {image_path} succesfully deleted'
     }
 
-# Jadi di sini nanti akan diganti menjadi langsung diproses 
-# Ganti nanti nama fungsi nya ini
-@router.post('/upload-temporary-image/')
-async def upload_temporary_image(imageFile: UploadFile = File(...)):
-    print('file,file',imageFile)
+# Jadi di sini nanti akan diganti menjadi langsung diproses
+@router.post('/send-image-to-detect/')
+async def send_image_to_detect(imageFile: UploadFile = File(...)):
     temp_image_name = f'{generate_unique_string()[:5]}-{imageFile.filename}'
+    detector_id= get_detector_id(imageFile.filename)
+    print('imageFile.filename',imageFile.filename)
+    print('detector_id',detector_id)
 
     save_image(imageFile.file.read(), temp_image_name, TEMPORARY_IMAGE_FOLDER)
     
@@ -261,7 +262,7 @@ async def upload_temporary_image(imageFile: UploadFile = File(...)):
 
     detection_result= get_dummy_detection(image, temp_image_name)
 
-    detector_ref = await Detector.get(id=detection_result['detector_id'])
+    detector_ref = await Detector.get(id=detector_id)
 
     result_fullPlateNumber = detection_result['fullPlateNumber']
     result_plateNumber = detection_result['plateNumber']
