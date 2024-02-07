@@ -12,7 +12,7 @@ from app.detect.detect import get_dummy_detection
 
 from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER
 from app.utils.const.dummy import dummy_new_detection
-from app.utils.functions.string import get_unique_image_name, generate_unique_string
+from app.utils.functions.string import get_unique_image_name, generate_unique_string, get_detector_id
 from app.utils.functions.file import delete_image_if_exists, decode_and_save_image, save_image
 from app.utils.functions.date import parse_date_detection
 
