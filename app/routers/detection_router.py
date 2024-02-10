@@ -8,7 +8,7 @@ from tortoise.expressions import Q
 
 from app.models.detection_model import *
 
-from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER
+from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER, CAR_IMAGE_FOLDER, FRAME_IMAGE_FOLDER
 from app.utils.const.dummy import dummy_new_detection
 from app.utils.functions.string import get_unique_image_name, generate_unique_string, get_detector_id
 from app.utils.functions.file import delete_image_if_exists, decode_and_save_image, save_image
@@ -17,8 +17,6 @@ from app.utils.functions.date import parse_date_detection
 # Model
 from app.detect import *
 
-import base64
-from io import BytesIO
 import os
 import re
 
@@ -62,6 +60,17 @@ async def add_detection(detector_id: int, detection_date: str, detection_info: d
 
     image_name = get_unique_image_name(f'{detector_id}-{fullPlateNumber}')
     decode_and_save_image(detection_info.imagePath, image_name, DETECTION_IMAGE_FOLDER)
+
+    car_image_name= ''
+    frame_image_name= ''
+
+    if len(detection_info.carImagePath)>0:
+        car_image_name= f'car-{image_name}'
+        decode_and_save_image(detection_info.carImagePath, car_image_name, CAR_IMAGE_FOLDER)
+
+    if len(detection_info.frameImagePath)>0:
+        frame_image_name= f'frame-{image_name}'
+        decode_and_save_image(detection_info.frameImagePath, frame_image_name, FRAME_IMAGE_FOLDER)
     
     detection_data = {
         "fullPlateNumber": fullPlateNumber,
@@ -69,8 +78,10 @@ async def add_detection(detector_id: int, detection_date: str, detection_info: d
         "isViolating": isViolating,
         "plateType": plateType,
         "policyAtTheMoment": policyAtTheMoment,
+        "detectionDate": parse_date_detection(detection_date),
         "imagePath": image_name,
-        "detectionDate": parse_date_detection(detection_date)
+        "carImagePath": car_image_name,
+        "frameImagePath": frame_image_name
     }
 
     detection_obj = await Detection.create(**detection_data, detector=detector_ref)

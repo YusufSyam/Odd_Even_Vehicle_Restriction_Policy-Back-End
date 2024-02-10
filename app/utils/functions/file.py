@@ -1,5 +1,6 @@
 import os
 import cv2
+import base64
 
 def delete_image_if_exists(image_dir, image_name):
     file_path= f'{os.path.join(image_dir, image_name)}'
@@ -14,12 +15,9 @@ def delete_image_if_exists(image_dir, image_name):
 
 
 def decode_and_save_image(encoded_image_str, image_name, base_path):
-    try:
-        image_data = decode_image(encoded_image_str)
-        
-        save_image(image_data, image_name, base_path)
-    except:
-        print('Terjadi Kesalahan dalam Mendekode dan Menyimpan Gambar')
+    image_data = decode_image(encoded_image_str)
+    
+    save_image(image_data, image_name, base_path)
 
 def decode_image(encoded_image_str):
     image_data = base64.b64decode(encoded_image_str)
