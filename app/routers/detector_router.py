@@ -179,8 +179,8 @@ async def get_detector_card_all():
         temp_detectedViolatorTotal = await Tortoise.get_connection("default").execute_query(detectedViolatorTotal_query)
         detectedViolatorTotal = list(
             temp_detectedViolatorTotal)[-1][0]['detectedViolatorTotal']
-        print('detectedViolatorTotal_query: ', detectedViolatorTotal_query)
-        print('detectedViolatorTotal: ', detectedViolatorTotal, '\n\n')
+        # print('detectedViolatorTotal_query: ', detectedViolatorTotal_query)
+        # print('detectedViolatorTotal: ', detectedViolatorTotal, '\n\n')
 
         passingVehicleTotal_query = f"SELECT COUNT(*) AS passingVehicleTotal FROM `detection` WHERE detector_id={i.id}"
         temp_passingVehicleTotal = await Tortoise.get_connection("default").execute_query(passingVehicleTotal_query)

@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 def parse_date_detection(date_string:str):
     try:
         if date_string is None or date_string.strip() == "":

@@ -8,13 +8,14 @@ from tortoise.expressions import Q
 
 from app.models.detection_model import *
 
-from app.detect.detect import get_dummy_detection
-
 from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER
 from app.utils.const.dummy import dummy_new_detection
 from app.utils.functions.string import get_unique_image_name, generate_unique_string, get_detector_id
 from app.utils.functions.file import delete_image_if_exists, decode_and_save_image, save_image
 from app.utils.functions.date import parse_date_detection
+
+# Model
+from app.detect import *
 
 import base64
 from io import BytesIO
@@ -95,6 +96,8 @@ async def add_manual_detection(detector_id: int, detection_date: str, detection_
             isViolating = detection_info.isViolating
             plateType = detection_info.plateType
             policyAtTheMoment = detection_info.policyAtTheMoment
+            carImagePath = detection_info.carImagePath
+            frameImagePath = detection_info.frameImagePath
             image_name = detection_info.imagePath
 
             # Di sini nanti bikin fungsi yang kasi pindah gambar dari temp manual detection folder ke images/detection
@@ -111,6 +114,8 @@ async def add_manual_detection(detector_id: int, detection_date: str, detection_
                 "isViolating": isViolating,
                 "plateType": plateType,
                 "policyAtTheMoment": policyAtTheMoment,
+                "carImagePath": carImagePath,
+                "frameImagePath": frameImagePath,
                 "imagePath": image_name,
                 "detectionDate": detection_date_parsed
             }
@@ -187,16 +192,17 @@ async def get_detection_by_detector_time(detector_id: int, date: str):
 async def upload_manual_detection_file(
     file: UploadFile = File(...)
 ):
-    file_info = {
-        "filename": file.filename,
-        "content_type": file.content_type,
-        "file_size": len(file.file.read())
-    }
+    image_name= file.filename
+    save_image(file.file.read(), image_name, TEMPORARY_IMAGE_FOLDER)
 
-    print(file_info, 'llllllllllllllllllllllllllllllllllll')
+    image = cv2.imread(f'{TEMPORARY_IMAGE_FOLDER}/{image_name}')
+
+    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name)
+
+    delete_image_if_exists(TEMPORARY_IMAGE_FOLDER, image_name)
 
     response = {
-        "detection_list": dummy_new_detection
+        "detection_list": detection_result
     }
 
     return {
@@ -250,52 +256,41 @@ async def delete_temp_image(image_path: str):
 # Jadi di sini nanti akan diganti menjadi langsung diproses
 @router.post('/send-image-to-detect/')
 async def send_image_to_detect(imageFile: UploadFile = File(...)):
-    temp_image_name = f'{generate_unique_string()[:5]}-{imageFile.filename}'
+    temp_image_name = f'{generate_unique_string()}_{imageFile.filename}'
     detector_id= get_detector_id(imageFile.filename)
-    print('imageFile.filename',imageFile.filename)
-    print('detector_id',detector_id)
 
     save_image(imageFile.file.read(), temp_image_name, TEMPORARY_IMAGE_FOLDER)
     
     temp_image_path = f"{TEMPORARY_IMAGE_FOLDER}/{temp_image_name}"
     image = cv2.imread(temp_image_path)
 
-    detection_result= get_dummy_detection(image, temp_image_name)
+    detection_list= detect_plate_on_sent_image(image, temp_image_name, imageFile.filename)
+    detection_response_list= []
 
-    detector_ref = await Detector.get(id=detector_id)
+    for detection_result in detection_list:
+        detector_ref = await Detector.get(id=detector_id)
+        
+        detection_data = {
+            "fullPlateNumber": detection_result["fullPlateNumber"],
+            "plateNumber": detection_result["plateNumber"],
+            "isViolating": detection_result["isViolating"],
+            "plateType": detection_result["plateType"],
+            "policyAtTheMoment": detection_result["policyAtTheMoment"],
+            "detectionDate": detection_result["detectionDate"],
+            "detectionTime": detection_result["detectionTime"],
+            "imagePath": detection_result["imagePath"],
+            "carImagePath": detection_result["carImagePath"],
+            "frameImagePath": detection_result["frameImagePath"],
+        }
 
-    result_fullPlateNumber = detection_result['fullPlateNumber']
-    result_plateNumber = detection_result['plateNumber']
-    result_isViolating = detection_result['isViolating']
-    result_plateType = detection_result['plateType']
-    result_policyAtTheMoment = detection_result['policyAtTheMoment']
-    result_detectionDate = detection_result['detectionDate']
-    result_detectionTime = detection_result['detectionTime']
-    result_imagePath = detection_result['imagePath']
-    result_plateImagePath = detection_result['plateImagePath']
-    result_frameImagePath = detection_result['frameImagePath']
-    
-    detection_data = {
-        "fullPlateNumber": result_fullPlateNumber,
-        "plateNumber": result_plateNumber,
-        "isViolating": result_isViolating,
-        "plateType": result_plateType,
-        "policyAtTheMoment": result_policyAtTheMoment,
-        "detectionDate": result_detectionDate,
-        "detectionTime": result_detectionTime,
-        "imagePath": result_imagePath,
-        "plateImagePath": result_plateImagePath,
-        "frameImagePath": result_frameImagePath,
-    }
+        detection_response_list.append(detection_data)
 
-    detection_obj = await Detection.create(**detection_data, detector=detector_ref)
-    response = await detection_pydantic.from_tortoise_orm(detection_obj)
-
-    print('SUCCESS')
+        detection_obj = await Detection.create(**detection_data, detector=detector_ref)
+    # response = await detection_pydantic.from_tortoise_orm(detection_obj)
 
     return {
         "status": "ok",
-        "response": response
+        "response": detection_response_list
     }
 
     # return {
