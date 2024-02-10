@@ -208,7 +208,7 @@ async def upload_manual_detection_file(
 
     image = cv2.imread(f'{TEMPORARY_IMAGE_FOLDER}/{image_name}')
 
-    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name)
+    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name, detect_type="manual")
 
     delete_image_if_exists(TEMPORARY_IMAGE_FOLDER, image_name)
 
@@ -275,7 +275,7 @@ async def send_image_to_detect(imageFile: UploadFile = File(...)):
     temp_image_path = f"{TEMPORARY_IMAGE_FOLDER}/{temp_image_name}"
     image = cv2.imread(temp_image_path)
 
-    detection_list= detect_plate_on_sent_image(image, temp_image_name, imageFile.filename)
+    detection_list= detect_plate_on_sent_image(image, temp_image_name, imageFile.filename, detect_type="kamera")
     detection_response_list= []
 
     for detection_result in detection_list:

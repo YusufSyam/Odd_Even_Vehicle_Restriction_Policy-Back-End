@@ -138,16 +138,18 @@ def oevlpr_detection(frame, frame_num=0, count_runtime=False, filename='', upsca
     return detection_list
 
 
-def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None):
+def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None, detect_type= "kamera"):
+    # detect_type= "kamera" | "manual"
+
     if temp_image_name is None:
         temp_image_name= temp_img_path
 
     start_time = time.time()
-    logging.info(f'Memulai deteksi plat kendaraan pada {temp_image_name} ...')
+    logging.info(f'Memulai deteksi ({detect_type}) plat kendaraan pada {temp_image_name} ...')
     
     result_list = oevlpr_detection(image, filename=temp_img_path, count_runtime=True)
 
-    for result_dict in result_list:
+    for idx, result_dict in enumerate(result_list):
         raw_license_plate_text = result_dict['raw_license_plate_text']
         validated_raw_plate_text = validate_raw_plate_text(raw_license_plate_text)
 
@@ -158,6 +160,7 @@ def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None):
         plate_type = get_plate_type(plate_num)
         is_violating = get_is_car_violating(plate_num)
 
+        result_dict['index'] = idx
         result_dict['fullPlateNumber'] = validated_raw_plate_text
         result_dict['plateNumber'] = plate_num
         result_dict['plateType'] = plate_type
@@ -168,6 +171,7 @@ def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None):
         result_dict['imagePath'] = result_dict['license_plate_img_filename']
         result_dict['carImagePath'] = result_dict['car_img_filename']
         result_dict['frameImagePath'] = result_dict['frame_img_filename']
+        
 
         print('result_dict:', result_dict)
 

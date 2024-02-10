@@ -493,3 +493,44 @@
 2024-02-11 01:00:10,369 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000025E0C22F910>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
 2024-02-11 01:00:10,369 (INFO) - Tortoise-ORM generating schema
 2024-02-11 01:00:34,439 (INFO) - Tortoise-ORM shutdown
+2024-02-11 01:00:58,257 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000019DD25948B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 01:00:58,257 (INFO) - Tortoise-ORM generating schema
+2024-02-11 02:36:14,626 (INFO) - Memulai deteksi plat kendaraan pada Untitled design(18).png.png ...
+2024-02-11 02:36:16,422 (INFO) - Pada Untitled design(18).png.png terdeteksi 3 plat kendaraan
+2024-02-11 02:36:34,666 (INFO) - Plat kendaraan terekognisi: DD:1532:SA:1 2 '27
+2024-02-11 02:36:42,451 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:10 .20
+2024-02-11 02:36:47,303 (INFO) - Plat kendaraan terekognisi: ABIz9DH
+2024-02-11 02:36:47,303 (INFO) - Plat kendaraan DD:1532:SA:1 2 '27 telah divalidasi menjadi DD 1532 SA
+2024-02-11 02:36:47,306 (INFO) - Plat kendaraan AB:136L:AN:10 .20 telah divalidasi menjadi AB 1364 AN
+2024-02-11 02:36:47,307 (INFO) - Plat kendaraan ABIz9DH telah divalidasi menjadi 4812 PDH
+2024-02-11 02:36:47,308 (INFO) - Deteksi Untitled design(18).png.png berjalan selama 32.68 detik
+2024-02-11 02:36:47,309 (INFO) - Deteksi Untitled design(18).png.png selesai.
+2024-02-11 02:44:29,822 (INFO) - Memulai deteksi plat kendaraan pada Untitled design(18).png.png ...
+2024-02-11 02:44:30,198 (INFO) - Pada Untitled design(18).png.png terdeteksi 3 plat kendaraan
+2024-02-11 02:44:41,124 (INFO) - Plat kendaraan terekognisi: DD:1532:SA:1 2 '27
+2024-02-11 02:44:48,566 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:10 .20
+2024-02-11 02:44:53,585 (INFO) - Plat kendaraan terekognisi: ABIz9DH
+2024-02-11 02:44:53,585 (INFO) - Plat kendaraan DD:1532:SA:1 2 '27 telah divalidasi menjadi DD 1532 SA
+2024-02-11 02:44:53,585 (INFO) - Plat kendaraan AB:136L:AN:10 .20 telah divalidasi menjadi AB 1364 AN
+2024-02-11 02:44:53,593 (INFO) - Plat kendaraan ABIz9DH telah divalidasi menjadi 4812 PDH
+2024-02-11 02:44:53,593 (INFO) - Deteksi Untitled design(18).png.png berjalan selama 23.77 detik
+2024-02-11 02:44:53,593 (INFO) - Deteksi Untitled design(18).png.png selesai.
+2024-02-11 02:45:35,779 (INFO) - Memulai deteksi plat kendaraan pada GRID FOTO MOBIL.png.png ...
+2024-02-11 02:45:36,158 (INFO) - Pada GRID FOTO MOBIL.png.png terdeteksi 4 plat kendaraan
+2024-02-11 02:45:40,252 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:'20
+2024-02-11 02:45:41,815 (INFO) - Plat kendaraan terekognisi: AB:1473:R [:0s:J 3
+2024-02-11 02:45:46,586 (INFO) - Plat kendaraan terekognisi: IH:8672:Gf
+2024-02-11 02:45:50,012 (INFO) - Plat kendaraan terekognisi: 8:1321:Gu
+2024-02-11 02:45:50,012 (INFO) - Plat kendaraan AB:136L:AN:'20 telah divalidasi menjadi AB 1364 AN
+2024-02-11 02:45:50,012 (INFO) - Plat kendaraan AB:1473:R [:0s:J 3 telah divalidasi menjadi AB 1473 R
+2024-02-11 02:45:50,018 (INFO) - Plat kendaraan IH:8672:Gf telah divalidasi menjadi IH 8672 GF
+2024-02-11 02:45:50,020 (INFO) - Plat kendaraan 8:1321:Gu telah divalidasi menjadi B 1321 GU
+2024-02-11 02:45:50,022 (INFO) - Deteksi GRID FOTO MOBIL.png.png berjalan selama 14.24 detik
+2024-02-11 02:45:50,022 (INFO) - Deteksi GRID FOTO MOBIL.png.png selesai.
+2024-02-11 02:51:05,334 (INFO) - Tortoise-ORM shutdown
+2024-02-11 02:51:31,563 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B07DA638B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 02:51:31,563 (INFO) - Tortoise-ORM generating schema
+2024-02-11 02:52:05,458 (INFO) - Tortoise-ORM shutdown
+2024-02-11 02:52:16,276 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026E67584880>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 02:52:16,277 (INFO) - Tortoise-ORM generating schema
+2024-02-11 02:52:35,676 (INFO) - Tortoise-ORM shutdown
