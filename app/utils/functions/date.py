@@ -27,9 +27,8 @@ nama_hari_indonesia = {
     'Sunday': 'Minggu'
 }
 
-def generate_previous_n_day_violator_statistic_date_range():
-    end_date = datetime.now().date()
-    start_date = end_date - timedelta(days=6)
+def generate_previous_n_day_violator_statistic_date_range(end_date, days_num=6):
+    start_date = end_date - timedelta(days=days_num)
     date_range = [{
             'date':str(start_date + timedelta(days=x)),
             'detectedViolatorTotal': 0,
