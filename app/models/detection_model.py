@@ -31,6 +31,11 @@ class Detection(Model):
     policyAtTheMoment = fields.CharField(max_length=10, nullable=False)
 
 
+class DetectionEdit(BaseModel):
+    fullPlateNumber: str
+    isViolating: bool
+    plateType: str
+
 detection_pydantic = pydantic_model_creator(Detection, name="Detection")
 detection_pydantic_in = pydantic_model_creator(
     Detection, name="DetectionIn", exclude_readonly=True, exclude=['detectionTime', 'detectionDate'])

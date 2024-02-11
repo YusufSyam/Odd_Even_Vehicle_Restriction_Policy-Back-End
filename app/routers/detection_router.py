@@ -93,6 +93,26 @@ async def add_detection(detector_id: int, detection_date: str, detection_info: d
         "response": response
     }
 
+@router.put("/update-plate-number/{detection_id}")
+async def update_detection(detection_id: int, detection_edit:DetectionEdit):
+    detection = await Detection.filter(id=detection_id).first()
+
+    if not detection:
+        return {
+            "status": "error",
+            "message": f"No detection with detection id {detection_id} found"
+        }
+
+    # Mengupdate atribut fullPlateNumber
+    detection.fullPlateNumber = detection_edit.fullPlateNumber
+    detection.isViolating = detection_edit.isViolating
+    detection.plateType = detection_edit.plateType
+    await detection.save()
+
+    return {
+        "status": "ok",
+        "message": "Edit plate number success"
+    }
 
 @router.post('/manual-detection/{detector_id}/{detection_date}')
 async def add_manual_detection(detector_id: int, detection_date: str, detection_info_list: List[detection_pydantic_in]):
