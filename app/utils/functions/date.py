@@ -1,4 +1,5 @@
-from datetime import datetime
+from datetime import datetime, timedelta
+import calendar
 
 def parse_date_detection(date_string:str):
     try:
@@ -15,3 +16,24 @@ def get_current_date():
 
 def get_current_time():
     return datetime.now().time()
+
+nama_hari_indonesia = {
+    'Monday': 'Senin',
+    'Tuesday': 'Selasa',
+    'Wednesday': 'Rabu',
+    'Thursday': 'Kamis',
+    'Friday': 'Jumat',
+    'Saturday': 'Sabtu',
+    'Sunday': 'Minggu'
+}
+
+def generate_previous_n_day_violator_statistic_date_range():
+    end_date = datetime.now().date()
+    start_date = end_date - timedelta(days=6)
+    date_range = [{
+            'date':str(start_date + timedelta(days=x)),
+            'detectedViolatorTotal': 0,
+            'detectedObeyTotal': 0,
+            'dayName': nama_hari_indonesia[calendar.day_name[(start_date + timedelta(days=x)).weekday()]]
+        } for x in range((end_date - start_date).days + 1)]
+    return date_range

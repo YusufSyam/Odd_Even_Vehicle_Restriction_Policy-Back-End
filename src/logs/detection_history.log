@@ -534,3 +534,274 @@
 2024-02-11 02:52:16,276 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026E67584880>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
 2024-02-11 02:52:16,277 (INFO) - Tortoise-ORM generating schema
 2024-02-11 02:52:35,676 (INFO) - Tortoise-ORM shutdown
+2024-02-11 02:52:46,894 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000234030A38B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 02:52:46,894 (INFO) - Tortoise-ORM generating schema
+2024-02-11 02:52:47,338 (INFO) - Memulai deteksi (manual) plat kendaraan pada GRID FOTO MOBIL.png.png ...
+2024-02-11 02:52:49,263 (INFO) - Pada GRID FOTO MOBIL.png.png terdeteksi 4 plat kendaraan
+2024-02-11 02:52:51,880 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:'20
+2024-02-11 02:52:54,827 (INFO) - Plat kendaraan terekognisi: AB:1473:R [:0s:J 3
+2024-02-11 02:52:58,290 (INFO) - Plat kendaraan terekognisi: IH:8672:Gf
+2024-02-11 02:53:02,873 (INFO) - Plat kendaraan terekognisi: 8:1321:Gu
+2024-02-11 02:53:02,873 (INFO) - Plat kendaraan AB:136L:AN:'20 telah divalidasi menjadi AB 1364 AN
+2024-02-11 02:53:02,875 (INFO) - Plat kendaraan AB:1473:R [:0s:J 3 telah divalidasi menjadi AB 1473 R
+2024-02-11 02:53:02,875 (INFO) - Plat kendaraan IH:8672:Gf telah divalidasi menjadi IH 8672 GF
+2024-02-11 02:53:02,875 (INFO) - Plat kendaraan 8:1321:Gu telah divalidasi menjadi B 1321 GU
+2024-02-11 02:53:02,877 (INFO) - Deteksi GRID FOTO MOBIL.png.png berjalan selama 15.54 detik
+2024-02-11 02:53:02,877 (INFO) - Deteksi GRID FOTO MOBIL.png.png selesai.
+2024-02-11 03:11:16,053 (INFO) - Memulai deteksi (manual) plat kendaraan pada 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png ...
+2024-02-11 03:11:16,554 (INFO) - Pada 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png terdeteksi 1 plat kendaraan
+2024-02-11 03:11:17,810 (INFO) - Plat kendaraan terekognisi: AB:1362:AN:10_:20
+2024-02-11 03:11:17,810 (INFO) - Plat kendaraan AB:1362:AN:10_:20 telah divalidasi menjadi AB 1362 AN
+2024-02-11 03:11:17,812 (INFO) - Deteksi 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png berjalan selama 1.76 detik
+2024-02-11 03:11:17,812 (INFO) - Deteksi 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png selesai.
+2024-02-11 09:45:23,161 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002069E5B38B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 09:45:23,194 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:13:54,929 (INFO) - Tortoise-ORM shutdown
+2024-02-11 10:14:06,751 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001EC79EA48B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 10:14:06,752 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:14:28,666 (INFO) - Tortoise-ORM shutdown
+2024-02-11 10:14:40,307 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000022BAD4748B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 10:14:40,307 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:14:46,528 (INFO) - Tortoise-ORM shutdown
+2024-02-11 10:14:57,095 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000015633444850>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 10:14:57,095 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:19:32,650 (INFO) - Tortoise-ORM shutdown
+2024-02-11 10:19:43,836 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000011D3E27C370>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 10:19:43,836 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:20:11,876 (INFO) - Tortoise-ORM shutdown
+2024-02-11 10:20:21,698 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B6AFCFC370>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 10:20:21,698 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:22:51,452 (INFO) - Tortoise-ORM shutdown
+2024-02-11 10:23:01,944 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002152063C370>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 10:23:01,944 (INFO) - Tortoise-ORM generating schema
+2024-02-11 10:29:28,469 (INFO) - Memulai deteksi (manual) plat kendaraan pada Untitled design(18).png.png ...
+2024-02-11 10:29:31,577 (INFO) - Pada Untitled design(18).png.png terdeteksi 3 plat kendaraan
+2024-02-11 10:29:43,826 (INFO) - Plat kendaraan terekognisi: DD:1532:SA:1 2 '27
+2024-02-11 10:29:51,520 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:10 .20
+2024-02-11 10:29:55,928 (INFO) - Plat kendaraan terekognisi: ABIz9DH
+2024-02-11 10:29:55,928 (INFO) - Plat kendaraan DD:1532:SA:1 2 '27 telah divalidasi menjadi DD 1532 SA
+2024-02-11 10:29:55,936 (INFO) - Plat kendaraan AB:136L:AN:10 .20 telah divalidasi menjadi AB 1364 AN
+2024-02-11 10:29:55,936 (INFO) - Plat kendaraan ABIz9DH telah divalidasi menjadi 4812 PDH
+2024-02-11 10:29:55,939 (INFO) - Deteksi Untitled design(18).png.png berjalan selama 27.47 detik
+2024-02-11 10:29:55,939 (INFO) - Deteksi Untitled design(18).png.png selesai.
+2024-02-11 10:33:34,852 (INFO) - Memulai deteksi (manual) plat kendaraan pada 6aa89-cap1.jpg ...
+2024-02-11 10:33:35,230 (INFO) - Pada 6aa89-cap1.jpg terdeteksi 0 plat kendaraan
+2024-02-11 10:33:35,230 (INFO) - Deteksi 6aa89-cap1.jpg berjalan selama 0.38 detik
+2024-02-11 10:33:35,230 (INFO) - Deteksi 6aa89-cap1.jpg selesai.
+2024-02-11 10:34:37,216 (INFO) - Memulai deteksi (manual) plat kendaraan pada 6aa89-cap1.jpg ...
+2024-02-11 10:34:37,560 (INFO) - Pada 6aa89-cap1.jpg terdeteksi 0 plat kendaraan
+2024-02-11 10:34:37,560 (INFO) - Deteksi 6aa89-cap1.jpg berjalan selama 0.34 detik
+2024-02-11 10:34:37,560 (INFO) - Deteksi 6aa89-cap1.jpg selesai.
+2024-02-11 10:36:25,782 (INFO) - Memulai deteksi (manual) plat kendaraan pada 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png ...
+2024-02-11 10:36:26,201 (INFO) - Pada 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png terdeteksi 1 plat kendaraan
+2024-02-11 10:36:27,946 (INFO) - Plat kendaraan terekognisi: AB:1362:AN:10_:20
+2024-02-11 10:36:27,946 (INFO) - Plat kendaraan AB:1362:AN:10_:20 telah divalidasi menjadi AB 1362 AN
+2024-02-11 10:36:27,946 (INFO) - Deteksi 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png berjalan selama 2.16 detik
+2024-02-11 10:36:27,946 (INFO) - Deteksi 1-AB 1364 AN_c72e2575-74ae-4f56-9d4c-bb057de4049d.png.png selesai.
+2024-02-11 11:19:58,282 (INFO) - Tortoise-ORM shutdown
+2024-02-11 11:20:09,296 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001E1C22CB3A0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 11:20:09,296 (INFO) - Tortoise-ORM generating schema
+2024-02-11 11:31:13,582 (INFO) - Memulai deteksi (manual) plat kendaraan pada 1-DD 1534 SA_6f420f44-93f1-4bd1-8325-226f693397b6.png.png ...
+2024-02-11 11:31:14,484 (INFO) - Pada 1-DD 1534 SA_6f420f44-93f1-4bd1-8325-226f693397b6.png.png terdeteksi 1 plat kendaraan
+2024-02-11 11:31:26,299 (INFO) - Plat kendaraan terekognisi: DD:1534:SA:1 2 '27
+2024-02-11 11:31:26,307 (INFO) - Plat kendaraan DD:1534:SA:1 2 '27 telah divalidasi menjadi DD 1534 SA
+2024-02-11 11:31:26,309 (INFO) - Deteksi 1-DD 1534 SA_6f420f44-93f1-4bd1-8325-226f693397b6.png.png berjalan selama 12.73 detik
+2024-02-11 11:31:26,309 (INFO) - Deteksi 1-DD 1534 SA_6f420f44-93f1-4bd1-8325-226f693397b6.png.png selesai.
+2024-02-11 11:33:23,643 (INFO) - Tortoise-ORM shutdown
+2024-02-11 11:33:36,377 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000017D0668B3A0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 11:33:36,377 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:17:55,425 (INFO) - Memulai deteksi (manual) plat kendaraan pada 50.E 6691 PAB-04-21.jpg ...
+2024-02-11 21:17:58,201 (INFO) - Pada 50.E 6691 PAB-04-21.jpg terdeteksi 1 plat kendaraan
+2024-02-11 21:18:02,798 (INFO) - Plat kendaraan terekognisi: Ie:6691:PABi:04 . 21
+2024-02-11 21:18:02,800 (INFO) - Plat kendaraan Ie:6691:PABi:04 . 21 telah divalidasi menjadi IE 6691 PAB
+2024-02-11 21:18:02,800 (INFO) - Deteksi 50.E 6691 PAB-04-21.jpg berjalan selama 7.38 detik
+2024-02-11 21:18:02,800 (INFO) - Deteksi 50.E 6691 PAB-04-21.jpg selesai.
+2024-02-11 21:41:09,134 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:41:26,933 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026E7A47CF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:41:26,934 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:42:09,026 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:42:18,774 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001CFFA9BCFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:42:18,774 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:43:07,879 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:43:18,197 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001FE8118CF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:43:18,197 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:43:55,754 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:44:06,471 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000024D7665CF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:44:06,511 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:44:55,813 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:45:06,857 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000014BA403CF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:45:06,857 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:45:24,726 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:45:34,046 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001C2285FCF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:45:34,046 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:47:01,873 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:47:11,174 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000028ED09FCEE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:47:11,174 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:48:21,976 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:48:32,476 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002D8DE73BDC0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:48:32,476 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:49:11,096 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:49:22,366 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001A312F1CF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:49:22,366 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:50:26,822 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:50:38,748 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000020433736040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:50:38,748 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:51:08,547 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:51:19,485 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001F59FCE6040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:51:19,485 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:52:01,463 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:52:14,089 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B0C5B4CF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:52:14,089 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:53:24,529 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:53:35,513 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000189F54BCFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:53:35,518 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:53:40,132 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:53:52,403 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001C20379CF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:53:52,404 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:54:20,107 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:54:32,042 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001707CEFCF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:54:32,042 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:55:29,287 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:55:40,564 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001EF054E6040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:55:40,564 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:57:37,113 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:57:47,757 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D64901BD60>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:57:47,757 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:59:02,635 (INFO) - Tortoise-ORM shutdown
+2024-02-11 21:59:13,206 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001F9E4FE6040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 21:59:13,206 (INFO) - Tortoise-ORM generating schema
+2024-02-11 21:59:59,725 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:00:10,566 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000018E731CBDC0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:00:10,566 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:01:38,530 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:01:49,353 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000023355806040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:01:49,353 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:02:34,926 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:02:45,690 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000015224DDCF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:02:45,690 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:03:05,324 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:03:15,837 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000029F26E2BFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:03:15,837 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:03:27,890 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:03:38,138 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000027A5D43BF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:03:38,138 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:03:50,201 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:04:02,242 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001636BDEBFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:04:02,242 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:04:08,748 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:04:20,807 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000183D803BFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:04:20,807 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:05:51,681 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:06:03,844 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000027928D7CFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:06:03,844 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:07:12,698 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:07:24,060 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000019C04A0BF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:07:24,060 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:08:14,469 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:08:24,816 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000185A755BFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:08:24,816 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:08:54,198 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:09:05,328 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002661283BF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:09:05,328 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:13:31,282 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:13:42,158 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B97C71CFD0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:13:42,158 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:15:01,407 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:15:11,275 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001F7222EA4F0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:15:11,275 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:17:00,394 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:17:12,001 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001C4BC1C38B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:17:12,001 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:27:32,143 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:27:43,001 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001EDE8411040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:27:43,001 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:27:56,786 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:28:08,165 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000014BE0DAF0A0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:28:08,165 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:28:53,763 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:29:04,621 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001DF096DF070>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:29:04,621 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:30:59,410 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:33:16,342 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000164F4563040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:33:16,342 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:36:27,024 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:36:37,153 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001E4857A0070>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:36:37,153 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:40:49,450 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:40:59,795 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D5DC0D2040>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:40:59,795 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:50:06,733 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:50:42,519 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000017290B2F850>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:50:42,519 (INFO) - Tortoise-ORM generating schema
+2024-02-11 22:52:10,179 (INFO) - Tortoise-ORM shutdown
+2024-02-11 22:52:20,915 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001CDB0FFF880>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 22:52:20,918 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:32:39,502 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:32:52,675 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002F08FA9F820>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:32:52,675 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:33:16,114 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:33:29,736 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000019CB68BF880>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:33:29,736 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:35:32,797 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:35:46,319 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000225F47BF880>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:35:46,319 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:36:05,466 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:36:17,408 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000020F6C50F880>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:36:17,409 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:46:38,466 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:46:48,840 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000027FCDE908E0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:46:48,840 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:47:02,911 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:47:13,233 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001EF428508E0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:47:13,233 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:47:27,431 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:53:19,298 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000023FAA99FFA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:53:19,304 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:54:37,946 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:54:50,608 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001E3CAC10FA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:54:50,608 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:57:48,225 (INFO) - Tortoise-ORM shutdown
+2024-02-11 23:57:59,963 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000289DB30FFA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-11 23:57:59,963 (INFO) - Tortoise-ORM generating schema
+2024-02-11 23:59:58,284 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:00:07,858 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000018BA934FFA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:00:07,858 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:04:18,240 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:04:29,174 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D27042FFA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:04:29,174 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:05:20,332 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:05:32,089 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002464A3A1FA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:05:32,089 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:05:51,223 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:06:03,956 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000024AFC423F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:06:03,956 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:06:45,542 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:06:57,399 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000133C097FFA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:06:57,399 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:11:02,535 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:11:30,937 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000016947A05BB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:11:30,937 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:12:04,353 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:12:13,597 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002636D5C2BB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:12:13,597 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:12:51,590 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:13:02,220 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002BFA83A2BB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:13:02,220 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:14:47,543 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:15:19,913 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000028B118C3F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:15:19,913 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:16:41,392 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:16:50,457 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000029BE53C3CA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:16:50,457 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:17:26,517 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:17:35,887 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001EEFEF33F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:17:35,887 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:19:39,326 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:19:49,926 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001FD9703FFA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:19:49,926 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:19:50,356 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:20:01,923 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001622FA03BB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:20:01,923 (INFO) - Tortoise-ORM generating schema
+2024-02-12 00:20:07,498 (INFO) - Tortoise-ORM shutdown
+2024-02-12 00:20:20,019 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001F9A9523F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 00:20:20,019 (INFO) - Tortoise-ORM generating schema

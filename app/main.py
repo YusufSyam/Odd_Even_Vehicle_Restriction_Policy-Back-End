@@ -61,9 +61,7 @@ async def get_road_image(imageType:str, roadImagePath: str):
         return {"message":"invalid image type"}
 
     image_path = os.path.join(IMAGE_FOLDER_DICT[imageType], roadImagePath)
-
-    print('image_path', image_path)
-
+    
     if not os.path.isfile(image_path):
         return {"message": "File not found"}
 

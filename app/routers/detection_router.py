@@ -1,10 +1,11 @@
 from fastapi import FastAPI, Path, Header, Body, File, UploadFile, APIRouter, Form
 from fastapi.responses import FileResponse
 from typing import List
-from tortoise import fields
+from tortoise import fields, Tortoise
 import cv2
 
 from tortoise.expressions import Q
+from app.models.detection_model import Detection
 
 from app.models.detection_model import *
 
@@ -326,3 +327,19 @@ async def send_image_to_detect(imageFile: UploadFile = File(...)):
 @router.post("/print-type/")
 async def print_data_type(data: str):
     return {"data_type": str(type(data).__name__), "data_value": data}
+
+# DASHBOARD / ANALYTICS
+# @router.get('/get-violator-total-by-date/{date}')
+# async def get_violator_total_by_date(date: str):
+#     print(date,'date')
+#     try:
+#         result = await Detection.filter(detectionDate=query_date).values(
+#             pelanggar=Sum(Case(When(isViolating=True, then=1), default=0)),
+#             patuh=Sum(Case(When(isViolating=False, then=1), default=0))
+#         )
+#         return {
+#             'status':'ok',
+#             'data': result[0]
+#         }
+#     except Exception as e:
+#         raise HTTPException(status_code=404, detail=str(e))

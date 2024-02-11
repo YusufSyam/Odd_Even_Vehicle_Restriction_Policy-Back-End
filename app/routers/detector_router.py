@@ -7,11 +7,13 @@ from app.models.detection_model import Detection
 
 from app.utils.functions.string import get_unique_image_name
 from app.utils.functions.file import delete_image_if_exists
+from app.utils.functions.date import generate_previous_n_day_violator_statistic_date_range
 from app.utils.const.directory import ROAD_IMAGE_FOLDER, DETECTION_IMAGE_FOLDER
 
 import base64
 from io import BytesIO
 import os
+from datetime import datetime, timedelta
 
 import re
 
@@ -62,7 +64,7 @@ async def get_detector_all():
     }
 
 
-@router.get('/{detector_id}')
+@router.get('/get/{detector_id}')
 async def get_detector_spesific(detector_id: int):
     response = await detector_pydantic.from_queryset_single(Detector.get(id=detector_id))
 
@@ -151,7 +153,8 @@ async def get_detector_card_all_by_date(query_date: str):
             "roadName": i.roadName,
             "province": i.province,
             "city": i.city,
-            "status": "Aktif",
+            "status": "Aktif" if passingVehicleTotal>0 else "NonAktif",
+            # "status": "Aktif",
             "detectedViolatorTotal": detectedViolatorTotal,
             "passingVehicleTotal": passingVehicleTotal,
             "trafficConditions": "Macet",
@@ -194,7 +197,7 @@ async def get_detector_card_all():
             "province": i.province,
             "city": i.city,
             # "status": "Aktif",
-            "status": "Aktif" if i.id !=32 else "NonAktif",
+            "status": "Aktif" if passingVehicleTotal>0 else "NonAktif",
             "detectedViolatorTotal": detectedViolatorTotal,
             "passingVehicleTotal": passingVehicleTotal,
             "trafficConditions": "Macet",
@@ -240,3 +243,73 @@ async def get_min_date_of_detector(detector_id: int):
         "status": "ok",
         "data": response
     }
+
+
+@router.get('/get-active-detector-count/{query_date}')
+async def get_active_detector_count(query_date: str):
+    data = await detector_pydantic.from_queryset(Detector.all())
+
+    active_count= 0
+    non_active_count= 0
+
+    for i in data:
+        passingVehicleTotal_query = f"SELECT COUNT(*) AS passingVehicleTotal FROM `detection` WHERE detector_id={i.id} and detectionDate='{query_date}'"
+        temp_passingVehicleTotal = await Tortoise.get_connection("default").execute_query(passingVehicleTotal_query)
+        passingVehicleTotal = list(
+            temp_passingVehicleTotal)[-1][0]['passingVehicleTotal']
+            
+        if passingVehicleTotal>0:
+            active_count+= 1
+        else:
+            non_active_count+= 1
+
+    return {
+        "status": "ok",
+        "data": {
+            "active":active_count,
+            "nonActive":non_active_count,
+            "total": active_count+non_active_count
+        }
+    }
+
+# DASHBOARD / ANALYTICS
+@router.get('/get-violator-total-by-date/{query_date}')
+async def get_violator_total_by_date(query_date: str):
+    query= f"SELECT SUM(CASE WHEN isViolating = TRUE THEN 1 ELSE 0 END) AS detectedViolatorTotal, SUM(CASE WHEN isViolating = FALSE THEN 1 ELSE 0 END) AS detectedObeyTotal, COUNT(*) AS passingVehicleTotal FROM detection WHERE detectionDate = '{query_date}'"
+    violatorCountTemp = await Tortoise.get_connection("default").execute_query(query)
+    violatorCount = list(
+        violatorCountTemp)[-1][0]
+
+    return {
+        "status": "ok",
+        "data": violatorCount
+    }
+
+@router.get('/get-detector-violator-percentage/{query_date}')
+async def get_detector_violator_percentage(query_date: str):
+    query= f"SELECT d.detector_id, dt.roadName, COUNT(*) AS violating_count, ROUND((COUNT(*) / (SELECT COUNT(*) FROM detection WHERE detectionDate = '{query_date}' AND isViolating = 1)) * 100, 2) AS violation_percentage FROM detection d JOIN detector dt ON d.detector_id = dt.id WHERE d.detectionDate = '{query_date}' AND d.isViolating = 1 GROUP BY d.detector_id"
+    detector_violator_percentage_temp = await Tortoise.get_connection("default").execute_query(query)
+    detector_violator_percentage = list(
+        detector_violator_percentage_temp)[-1]
+
+    return {
+        "status": "ok",
+        "data": detector_violator_percentage
+    }
+
+@router.get('/get-previous-n-day-violator-statistic')
+async def get_previous_n_day_violator_statistic():
+    date_range = generate_previous_n_day_violator_statistic_date_range()
+    detections = await Detection.filter(detectionDate__range=(datetime.now().date() - timedelta(days=6), datetime.now().date())).values('detectionDate', 'isViolating')
+    
+    print(date_range, 'date_range   ')
+    for detection in detections:
+        detection_date = str(detection['detectionDate'])
+        for day_data in date_range:
+            if day_data['date'] == detection_date:
+                if detection['isViolating']:
+                    day_data['detectedViolatorTotal'] += 1
+                else:
+                    day_data['detectedObeyTotal'] += 1
+
+    return date_range
