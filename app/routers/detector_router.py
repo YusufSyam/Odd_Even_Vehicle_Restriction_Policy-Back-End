@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Path, Header, Body, File, UploadFile, APIRouter
+from fastapi import FastAPI, Path, Header, Body, File, UploadFile, APIRouter, HTTPException
 from fastapi.responses import FileResponse
 
 from tortoise import Tortoise
@@ -95,7 +95,7 @@ async def update_detector(detector_id: int, update_info: detector_pydantic_in):
         update_info['roadImagePath'], image_name, ROAD_IMAGE_FOLDER)
 
     detector.roadImagePath = image_name
-    print('Bikin Baru', detector.roadImagePath)
+    # print('Bikin Baru', detector.roadImagePath)
 
     await detector.save()
 
@@ -115,7 +115,7 @@ async def delete_detector(detector_id: int):
         related_detections = await Detection.filter(detector_id=selected_detector.id)
 
         for detection in related_detections:
-            print(f"Deleting Detection ID: {detection.id}")
+            # print(f"Deleting Detection ID: {detection.id}")
 
             delete_image_if_exists(DETECTION_IMAGE_FOLDER, detection.imagePath)
             await detection.delete()
@@ -312,7 +312,7 @@ async def get_previous_n_day_violator_statistic(end_date: str, days_num: int):
         end_date_parsed, int(days_num))
     detections = await Detection.filter(detectionDate__range=(end_date_parsed - timedelta(days=int(days_num)), datetime.now().date())).values('detectionDate', 'isViolating')
 
-    print(date_range, 'date_range   ')
+    # print(date_range, 'date_range   ')
     for detection in detections:
         detection_date = str(detection['detectionDate'])
         for day_data in date_range:
@@ -337,7 +337,7 @@ async def get_previous_n_day_violator_statistic_by_detector(end_date: str, days_
     detections = await Detection.filter(detectionDate__range=(end_date_parsed - timedelta(days=int(days_num)), datetime.now().date()),
                                         detector=detector_id).values('detectionDate', 'isViolating')
 
-    print(date_range, 'date_range   ')
+    # print(date_range, 'date_range   ')
     for detection in detections:
         detection_date = str(detection['detectionDate'])
         for day_data in date_range:
@@ -351,3 +351,52 @@ async def get_previous_n_day_violator_statistic_by_detector(end_date: str, days_
         "status": "ok",
         "data": date_range
     }
+
+# Endpoint untuk menghitung jumlah pelanggar dan patuh pada setiap jam
+
+
+@router.get("/get-detection_violator-by-hour/{detection_date}")
+async def get_detection_violator_by_hour(detection_date:str):
+    try:
+        # Konversi tanggal dari string ke objek datetime
+        query = f'''SELECT 
+                        HOUR(detectionTime) AS jam,
+                        SUM(CASE WHEN isViolating = 1 THEN 1 ELSE 0 END) AS detectedViolatorTotal,
+                        SUM(CASE WHEN isViolating = 0 THEN 1 ELSE 0 END) AS detectedObeyTotal
+                    FROM 
+                        detection
+                    WHERE 
+                        detectionDate = '{detection_date}'
+                    GROUP BY 
+                        jam;'''
+        detection_violator_by_hour_temp = await Tortoise.get_connection("default").execute_query(query)
+        detection_violator_by_hour = list(
+            detection_violator_by_hour_temp)[-1]
+
+        filled_results_temp = {hour: [0, 0] for hour in range(24)}
+
+        for result in detection_violator_by_hour:
+            filled_results_temp[result['jam']] = [
+                result['detectedViolatorTotal'],
+                result['detectedObeyTotal']
+            ]
+
+        # filled_results= [{'detectedViolatorTotal': count[0], 'detectedObeyTotal': count[1]} for hour, count in filled_results.items()]
+        
+        detected_violator_count= []
+        detected_obey_count= []
+
+        for i in filled_results_temp.values():
+            detected_violator_count.append(i[0])
+            detected_obey_count.append(i[1])
+
+        return {
+            "status": "ok",
+            "data": {
+                'detectedViolatorCount':detected_violator_count,
+                'detectedObeyCount':detected_obey_count
+            }
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))

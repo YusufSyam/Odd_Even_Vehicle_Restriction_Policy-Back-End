@@ -892,3 +892,274 @@
 2024-02-12 03:06:58,709 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000219E551D490>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
 2024-02-12 03:06:58,709 (INFO) - Tortoise-ORM generating schema
 2024-02-12 03:14:32,977 (INFO) - Tortoise-ORM shutdown
+2024-02-12 03:14:47,196 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001CA76F57D00>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 03:14:47,196 (INFO) - Tortoise-ORM generating schema
+2024-02-12 03:18:27,954 (INFO) - Tortoise-ORM shutdown
+2024-02-12 14:23:52,847 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002898AECBC40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 14:23:52,857 (INFO) - Tortoise-ORM generating schema
+2024-02-12 14:26:53,418 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001CB371C0C40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-12 14:26:53,418 (INFO) - Tortoise-ORM generating schema
+2024-02-12 14:42:43,350 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:42:50,075 (INFO) - Pada 03a7003a-87c2-424a-8eb0-b7a6852221c1_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:42:50,075 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 6.73 detik
+2024-02-12 14:42:50,075 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:42:52,260 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:42:52,633 (INFO) - Pada 9278f5a8-b5e8-4cad-af5b-79ae09f3a573_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:42:52,633 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.37 detik
+2024-02-12 14:42:52,633 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:43:29,475 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:43:29,776 (INFO) - Pada 9221dc80-7386-41cc-9bd0-49ded6aa439f_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:43:29,776 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.30 detik
+2024-02-12 14:43:29,776 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:43:31,157 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:43:31,436 (INFO) - Pada a03ff229-6f40-45a2-8107-9b326edb9418_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:43:31,436 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.28 detik
+2024-02-12 14:43:31,436 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:43:32,966 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:43:33,238 (INFO) - Pada 5aab6172-8cf6-4067-8a6a-0e163c560826_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:43:33,238 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.27 detik
+2024-02-12 14:43:33,238 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:43:34,564 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:43:34,851 (INFO) - Pada ffa8f7c4-7845-4e4a-8532-1e87e6cde451_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:43:34,851 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.29 detik
+2024-02-12 14:43:34,851 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:43:36,193 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:43:36,556 (INFO) - Pada 8729f77f-67f2-4b7b-96df-5bc237125ab6_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:43:36,556 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.36 detik
+2024-02-12 14:43:36,556 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:43:37,782 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:43:38,076 (INFO) - Pada 37af3ede-38ed-4fe0-a0e1-28a5e565489d_ESP_CAPTURE---3.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:43:38,076 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 0.29 detik
+2024-02-12 14:43:38,076 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:44:06,775 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---3.jpg ...
+2024-02-12 14:44:07,074 (INFO) - Pada 86385b31-930f-4971-99ec-e5e06bf15bad_ESP_CAPTURE---3.jpg terdeteksi 1 plat kendaraan
+2024-02-12 14:45:01,670 (INFO) - Plat kendaraan terekognisi: DD 13@6JA:73
+2024-02-12 14:45:01,675 (INFO) - Plat kendaraan DD 13@6JA:73 telah divalidasi menjadi DD 634 TJ
+2024-02-12 14:45:01,675 (INFO) - Deteksi ESP_CAPTURE---3.jpg berjalan selama 54.90 detik
+2024-02-12 14:45:01,675 (INFO) - Deteksi ESP_CAPTURE---3.jpg selesai.
+2024-02-12 14:47:55,481 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---1.jpg ...
+2024-02-12 14:47:58,425 (INFO) - Pada 6f07f046-5d74-41c4-9e8f-89db85a0a8db_ESP_CAPTURE---1.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:47:58,425 (INFO) - Deteksi ESP_CAPTURE---1.jpg berjalan selama 2.94 detik
+2024-02-12 14:47:58,425 (INFO) - Deteksi ESP_CAPTURE---1.jpg selesai.
+2024-02-12 14:48:02,135 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---1.jpg ...
+2024-02-12 14:48:02,432 (INFO) - Pada 79ce85a6-7d7b-46bc-89c6-ff1c35228f0d_ESP_CAPTURE---1.jpg terdeteksi 0 plat kendaraan
+2024-02-12 14:48:02,432 (INFO) - Deteksi ESP_CAPTURE---1.jpg berjalan selama 0.30 detik
+2024-02-12 14:48:02,463 (INFO) - Deteksi ESP_CAPTURE---1.jpg selesai.
+2024-02-12 14:48:04,067 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---1.jpg ...
+2024-02-12 14:48:04,473 (INFO) - Pada c3b701aa-4aea-4b1b-abec-5126cc712151_ESP_CAPTURE---1.jpg terdeteksi 1 plat kendaraan
+2024-02-12 14:48:18,179 (INFO) - Plat kendaraan terekognisi: DDJ3@NJA::33
+2024-02-12 14:48:18,179 (INFO) - Plat kendaraan DDJ3@NJA::33 telah divalidasi menjadi 0033 NJA
+2024-02-12 14:48:18,179 (INFO) - Deteksi ESP_CAPTURE---1.jpg berjalan selama 14.11 detik
+2024-02-12 14:48:18,179 (INFO) - Deteksi ESP_CAPTURE---1.jpg selesai.
+2024-02-12 14:55:00,001 (INFO) - Memulai deteksi (manual) plat kendaraan pada WhatsApp Image 2024-02-12 at 14.54.34.jpeg ...
+2024-02-12 14:55:00,976 (INFO) - Pada WhatsApp Image 2024-02-12 at 14.54.34.jpeg terdeteksi 1 plat kendaraan
+2024-02-12 14:55:11,900 (INFO) - Plat kendaraan terekognisi: DD 1305MJA:01 -27
+2024-02-12 14:55:11,908 (INFO) - Plat kendaraan DD 1305MJA:01 -27 telah divalidasi menjadi DD 1305 MJA
+2024-02-12 14:55:11,910 (INFO) - Deteksi WhatsApp Image 2024-02-12 at 14.54.34.jpeg berjalan selama 11.91 detik
+2024-02-12 14:55:11,910 (INFO) - Deteksi WhatsApp Image 2024-02-12 at 14.54.34.jpeg selesai.
+2024-02-12 16:14:18,044 (INFO) - Memulai deteksi (manual) plat kendaraan pada GRID FOTO MOBIL.png ...
+2024-02-12 16:14:22,313 (INFO) - Pada GRID FOTO MOBIL.png terdeteksi 4 plat kendaraan
+2024-02-12 16:14:36,594 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:'20
+2024-02-12 16:14:38,883 (INFO) - Plat kendaraan terekognisi: AB:1473:R [:0s:J 3
+2024-02-12 16:14:42,958 (INFO) - Plat kendaraan terekognisi: IH:8672:Gf
+2024-02-12 16:14:46,774 (INFO) - Plat kendaraan terekognisi: 8:1321:Gu
+2024-02-12 16:14:46,790 (INFO) - Plat kendaraan AB:136L:AN:'20 telah divalidasi menjadi AB 1364 AN
+2024-02-12 16:14:46,810 (INFO) - Plat kendaraan AB:1473:R [:0s:J 3 telah divalidasi menjadi AB 1473 R
+2024-02-12 16:14:46,810 (INFO) - Plat kendaraan IH:8672:Gf telah divalidasi menjadi IH 8672 GF
+2024-02-12 16:14:46,813 (INFO) - Plat kendaraan 8:1321:Gu telah divalidasi menjadi B 1321 GU
+2024-02-12 16:14:46,814 (INFO) - Deteksi GRID FOTO MOBIL.png berjalan selama 28.77 detik
+2024-02-12 16:14:46,814 (INFO) - Deteksi GRID FOTO MOBIL.png selesai.
+2024-02-12 16:33:16,499 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:19,089 (INFO) - Pada e2e43199-1cf3-4685-a89f-205740a3ebc8_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:19,089 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 2.59 detik
+2024-02-12 16:33:19,089 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:21,004 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:21,354 (INFO) - Pada acf13e94-0510-4c28-bf25-90eaf0f02904_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:21,354 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.35 detik
+2024-02-12 16:33:21,354 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:23,352 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:23,632 (INFO) - Pada 8485f9e5-901b-4245-a096-4318dd1b1029_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:23,632 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.28 detik
+2024-02-12 16:33:23,632 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:26,641 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:26,903 (INFO) - Pada 26c6001e-54e3-48d5-a30c-82d98ba407d7_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:26,903 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.26 detik
+2024-02-12 16:33:26,903 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:31,478 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:31,764 (INFO) - Pada 96399c79-41e6-4dff-b711-f397005939eb_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:31,764 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.29 detik
+2024-02-12 16:33:31,764 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:36,449 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:36,696 (INFO) - Pada cca2663e-b7fc-4948-9438-c40fcd534430_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:36,696 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.25 detik
+2024-02-12 16:33:36,696 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:41,803 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:42,085 (INFO) - Pada 7d039c20-5d0b-4110-a620-c95dd84377e5_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:42,085 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.28 detik
+2024-02-12 16:33:42,085 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:49,724 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:50,018 (INFO) - Pada b849fb3a-af06-4473-b500-857229dd818e_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:50,018 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.29 detik
+2024-02-12 16:33:50,018 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:54,392 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:54,684 (INFO) - Pada 65b69c93-52c0-499c-91fa-0c427fd80fce_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:54,684 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.29 detik
+2024-02-12 16:33:54,684 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:33:57,713 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:33:58,001 (INFO) - Pada ed788e40-5c14-45f5-93aa-f2cddcab399f_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:33:58,002 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.29 detik
+2024-02-12 16:33:58,002 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:34:00,958 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:34:01,231 (INFO) - Pada b46ab8d2-ce93-4b48-b306-d7901d7516e7_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:34:01,231 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.27 detik
+2024-02-12 16:34:01,231 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:34:03,969 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:34:04,245 (INFO) - Pada b4ee9af2-0e0a-48fa-b090-4c6b720344aa_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:34:04,245 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.28 detik
+2024-02-12 16:34:04,245 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:34:06,891 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:34:07,171 (INFO) - Pada 230ba8b6-7c40-4a0f-a03e-87231fdb0aa0_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:34:07,171 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.28 detik
+2024-02-12 16:34:07,171 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:34:10,200 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:34:10,432 (INFO) - Pada dd2c952c-cd60-4aea-9aa4-eb0078d30f99_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:34:10,432 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.23 detik
+2024-02-12 16:34:10,432 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:34:12,817 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:34:13,109 (INFO) - Pada 6c6d62d6-af29-4529-a3a6-ef9b19a9070a_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:34:13,109 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.29 detik
+2024-02-12 16:34:13,109 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:35:31,694 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:35:31,978 (INFO) - Pada 10e7c9b0-bec1-4300-b4fb-b9f1601907d1_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:35:31,978 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.28 detik
+2024-02-12 16:35:31,978 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:35:41,740 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:35:42,013 (INFO) - Pada 0ca3a29c-fa7a-46b4-bcbb-c62e38abe4d0_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:35:42,013 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.27 detik
+2024-02-12 16:35:42,013 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:35:52,632 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:35:52,904 (INFO) - Pada fb47577e-452a-43a2-a58e-538db89b9c5e_ESP_CAPTURE---33.jpg terdeteksi 0 plat kendaraan
+2024-02-12 16:35:52,904 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 0.27 detik
+2024-02-12 16:35:52,904 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:35:55,280 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:35:55,574 (INFO) - Pada c971d25f-3b97-4ac7-8e48-a05ea8aea352_ESP_CAPTURE---33.jpg terdeteksi 1 plat kendaraan
+2024-02-12 16:36:24,830 (INFO) - Plat kendaraan terekognisi: 7J3:30t>
+2024-02-12 16:36:24,848 (INFO) - Plat kendaraan 7J3:30t> telah divalidasi menjadi 733 JOT
+2024-02-12 16:36:24,909 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 29.63 detik
+2024-02-12 16:36:24,909 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 16:36:25,564 (INFO) - Memulai deteksi (kamera) plat kendaraan pada ESP_CAPTURE---33.jpg ...
+2024-02-12 16:36:27,765 (INFO) - Pada 8105e8e0-15e5-4205-bef8-3c953a70f856_ESP_CAPTURE---33.jpg terdeteksi 1 plat kendaraan
+2024-02-12 16:36:43,627 (INFO) - Plat kendaraan terekognisi: 0:DD 1305NJA
+2024-02-12 16:36:43,631 (INFO) - Plat kendaraan 0:DD 1305NJA telah divalidasi menjadi O 1305 NJA
+2024-02-12 16:36:43,646 (INFO) - Deteksi ESP_CAPTURE---33.jpg berjalan selama 18.08 detik
+2024-02-12 16:36:43,646 (INFO) - Deteksi ESP_CAPTURE---33.jpg selesai.
+2024-02-12 17:03:10,208 (INFO) - Tortoise-ORM shutdown
+2024-02-13 21:00:39,048 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026C9ACFC490>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-13 21:00:39,062 (INFO) - Tortoise-ORM generating schema
+2024-02-13 21:08:22,663 (INFO) - Memulai deteksi (manual) plat kendaraan pada GRID FOTO MOBIL(2).png ...
+2024-02-13 21:08:28,434 (INFO) - Pada GRID FOTO MOBIL(2).png terdeteksi 2 plat kendaraan
+2024-02-13 21:08:51,070 (INFO) - Plat kendaraan terekognisi: E:5515:QT:06 ' 20
+2024-02-13 21:09:03,822 (INFO) - Plat kendaraan terekognisi: E:2648:05 ":}9:0 I
+2024-02-13 21:09:03,836 (INFO) - Plat kendaraan E:5515:QT:06 ' 20 telah divalidasi menjadi E 5515 QT
+2024-02-13 21:09:03,836 (INFO) - Plat kendaraan E:2648:05 ":}9:0 I telah divalidasi menjadi E 2648 OS
+2024-02-13 21:09:03,836 (INFO) - Deteksi GRID FOTO MOBIL(2).png berjalan selama 41.17 detik
+2024-02-13 21:09:03,836 (INFO) - Deteksi GRID FOTO MOBIL(2).png selesai.
+2024-02-13 21:53:24,654 (INFO) - Memulai deteksi (manual) plat kendaraan pada GRID FOTO MOBIL.png ...
+2024-02-13 21:53:25,264 (INFO) - Pada GRID FOTO MOBIL.png terdeteksi 4 plat kendaraan
+2024-02-13 21:53:27,702 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:'20
+2024-02-13 21:53:29,366 (INFO) - Plat kendaraan terekognisi: AB:1473:R [:0s:J 3
+2024-02-13 21:53:33,398 (INFO) - Plat kendaraan terekognisi: IH:8672:Gf
+2024-02-13 21:53:37,116 (INFO) - Plat kendaraan terekognisi: 8:1321:Gu
+2024-02-13 21:53:37,124 (INFO) - Plat kendaraan AB:136L:AN:'20 telah divalidasi menjadi AB 1364 AN
+2024-02-13 21:53:37,126 (INFO) - Plat kendaraan AB:1473:R [:0s:J 3 telah divalidasi menjadi AB 1473 R
+2024-02-13 21:53:37,128 (INFO) - Plat kendaraan IH:8672:Gf telah divalidasi menjadi IH 8672 GF
+2024-02-13 21:53:37,129 (INFO) - Plat kendaraan 8:1321:Gu telah divalidasi menjadi B 1321 GU
+2024-02-13 21:53:37,131 (INFO) - Deteksi GRID FOTO MOBIL.png berjalan selama 12.48 detik
+2024-02-13 21:53:37,131 (INFO) - Deteksi GRID FOTO MOBIL.png selesai.
+2024-02-14 03:07:11,210 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000016B18A9AC40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 03:07:11,215 (INFO) - Tortoise-ORM generating schema
+2024-02-14 03:10:21,537 (INFO) - Memulai deteksi (manual) plat kendaraan pada Untitled design(19).png ...
+2024-02-14 03:10:30,568 (INFO) - Pada Untitled design(19).png terdeteksi 4 plat kendaraan
+2024-02-14 03:10:39,825 (INFO) - Plat kendaraan terekognisi: AB:136L:AN:20
+2024-02-14 03:10:43,866 (INFO) - Plat kendaraan terekognisi: AA 841L:PB
+2024-02-14 03:10:47,941 (INFO) - Plat kendaraan terekognisi: AB1zgDH
+2024-02-14 03:10:52,120 (INFO) - Plat kendaraan terekognisi: JH:8672:Gf
+2024-02-14 03:10:52,120 (INFO) - Plat kendaraan AB:136L:AN:20 telah divalidasi menjadi AB 1364 AN
+2024-02-14 03:10:52,128 (INFO) - Plat kendaraan AA 841L:PB telah divalidasi menjadi AA 8414 PB
+2024-02-14 03:10:52,130 (INFO) - Plat kendaraan AB1zgDH telah divalidasi menjadi 4812 GDH
+2024-02-14 03:10:52,131 (INFO) - Plat kendaraan JH:8672:Gf telah divalidasi menjadi JH 8672 GF
+2024-02-14 03:10:52,133 (INFO) - Deteksi Untitled design(19).png berjalan selama 30.60 detik
+2024-02-14 03:10:52,133 (INFO) - Deteksi Untitled design(19).png selesai.
+2024-02-14 20:23:35,800 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001C9AF8FBC40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:23:35,810 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:27:53,548 (INFO) - Memulai deteksi (manual) plat kendaraan pada GRID FOTO MOBIL(2).png ...
+2024-02-14 20:28:01,596 (INFO) - Pada GRID FOTO MOBIL(2).png terdeteksi 2 plat kendaraan
+2024-02-14 20:28:35,277 (INFO) - Plat kendaraan terekognisi: E:5515:QT:06 ' 20
+2024-02-14 20:28:47,933 (INFO) - Plat kendaraan terekognisi: E:2648:05 ":}9:0 I
+2024-02-14 20:28:47,943 (INFO) - Plat kendaraan E:5515:QT:06 ' 20 telah divalidasi menjadi E 5515 QT
+2024-02-14 20:28:47,945 (INFO) - Plat kendaraan E:2648:05 ":}9:0 I telah divalidasi menjadi E 2648 OS
+2024-02-14 20:28:47,946 (INFO) - Deteksi GRID FOTO MOBIL(2).png berjalan selama 54.40 detik
+2024-02-14 20:28:47,946 (INFO) - Deteksi GRID FOTO MOBIL(2).png selesai.
+2024-02-14 20:45:09,019 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:49:41,002 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001850EAB2F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:49:41,002 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:50:37,433 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:50:48,764 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000236D3DD1E80>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:50:48,764 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:51:14,544 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:51:25,143 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000180F873FE80>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:51:25,151 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:54:00,448 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:54:12,107 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000028F80DAFF10>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:54:12,107 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:55:32,810 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:55:43,297 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002B1B6090EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:55:43,297 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:58:28,105 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:58:38,611 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000181C70B1DF0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:58:38,611 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:58:59,226 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:59:17,265 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001E1AC60FF10>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:59:17,265 (INFO) - Tortoise-ORM generating schema
+2024-02-14 20:59:42,482 (INFO) - Tortoise-ORM shutdown
+2024-02-14 20:59:54,842 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002A262701EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 20:59:54,842 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:01:53,672 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:02:05,202 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000166ABC40EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:02:05,202 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:03:56,986 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:04:07,679 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001AB977A0DF0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:04:07,679 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:04:32,714 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:04:43,005 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B2B4840DF0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:04:43,006 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:05:08,599 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:07:02,844 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002B1B9820EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:07:02,844 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:07:25,464 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:07:38,049 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001C825220EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:07:38,049 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:08:36,741 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:08:47,285 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000023B1A9B0EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:08:47,285 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:08:59,904 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:09:10,611 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000017684420EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:09:10,611 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:16:17,221 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:16:39,527 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001AD741B0EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:16:39,527 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:17:14,552 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:17:26,192 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D2A9430EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:17:26,192 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:33:35,718 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:33:47,537 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000012B0E0BFF70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:33:47,537 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:34:46,459 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:34:58,447 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002DE48D6EF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:34:58,447 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:35:34,125 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:35:45,319 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000029ED34A0EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:35:45,319 (INFO) - Tortoise-ORM generating schema
+2024-02-14 21:43:48,510 (INFO) - Tortoise-ORM shutdown
+2024-02-14 21:44:00,936 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001DD8F00FF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-14 21:44:00,936 (INFO) - Tortoise-ORM generating schema
