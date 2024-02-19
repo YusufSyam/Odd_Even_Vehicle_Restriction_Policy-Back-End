@@ -88,7 +88,7 @@ def oevlpr_detection(frame, frame_num=0, count_runtime=False, filename='', upsca
                     license_plate_crop_straight)
 
             license_plate_crop_thresh = thresholding1(
-                license_plate_crop_straight)
+                license_plate_crop_straight)    
             license_plate_crop_thresh = opening(
                 license_plate_crop_thresh, opening_kernel_size)
             license_plate_crop_thresh = cv2.bitwise_not(
@@ -100,7 +100,7 @@ def oevlpr_detection(frame, frame_num=0, count_runtime=False, filename='', upsca
             license_plate_text, license_plate_text_score = read_license_plate(
                 license_plate_crop_thresh)
 
-            if True:
+            if license_plate_text is not None:
                 # if license_plate_text is not None:
                 if not is_frame_img_made:
                     frame_image_filename = f"{filename}"
@@ -109,7 +109,6 @@ def oevlpr_detection(frame, frame_num=0, count_runtime=False, filename='', upsca
                     is_frame_img_made = True
 
                 temp_filename= get_unique_image_name(identifier)
-
                 car_image_filename = f'thresh-{temp_filename}'
 
                 try:
@@ -138,8 +137,115 @@ def oevlpr_detection(frame, frame_num=0, count_runtime=False, filename='', upsca
     return detection_list
 
 
-def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None, detect_type= "kamera"):
+def oevlpr_detection2(frame, filename='', upscale_amount=6, vertical_stretch=0.6, opening_kernel_size=(3, 3), apply_remove_noise=False, apply_straightened_twice= False, apply_bitwise_not= False, apply_opening=False, thresholding_type=1):
+    global coco_model, license_plate_detector
+
+    detection_list = []
+
+    detections = coco_model(frame, conf=0.01)[0]
+    car_detections_list= detections.boxes.data.tolist()
+
+    detected_car = []
+    for detection in car_detections_list:
+        x1, y1, x2, y2, score, class_id = detection
+        if int(class_id) == 2:
+            detected_car.append([x1, y1, x2, y2, score])
+
+    detected_car_history = np.array(detected_car)
+
+    identifier = filename.split('.')[0]
+
+    license_plates = license_plate_detector(frame)[0]
+
+    is_frame_img_made = False
+
+    license_plates_list= license_plates.boxes.data.tolist()
+    
+    logging.info(f'Pada {filename} terdeteksi {len(license_plates_list)} plat kendaraan')
+
+    for license_plate in license_plates_list:
+        x1, y1, x2, y2, score, class_id = license_plate
+
+        xcar1, ycar1, xcar2, ycar2, car_id = get_car(license_plate, detected_car_history)
+        xcar1, ycar1, xcar2, ycar2 = limit_at_zero(xcar1), limit_at_zero(
+            ycar1), limit_at_zero(xcar2), limit_at_zero(ycar2)
+
+        if y2-y1 < x2-x1:
+            car_crop = frame[int(ycar1):int(ycar2), int(xcar1): int(xcar2), :]
+            license_plate_crop = frame[int(y1):int(y2), int(x1): int(x2), :]
+
+            # process license plate
+            license_plate_crop_gray = cv2.cvtColor(
+                license_plate_crop, cv2.COLOR_BGR2GRAY)
+
+            license_plate_crop_straight, is_straightened = straightening_image(license_plate_crop_gray)
+
+            license_plate_crop_straight = upscale_image(license_plate_crop_straight, upscale_amount)
+
+            if apply_remove_noise:
+                license_plate_crop_straight= remove_noise(license_plate_crop_straight)
+
+            if thresholding_type==1:
+                license_plate_crop_thresh = thresholding1(license_plate_crop_straight)
+            else:
+                license_plate_crop_thresh = thresholding2(license_plate_crop_straight)
+
+            if apply_opening:
+                license_plate_crop_thresh= opening(license_plate_crop_thresh, opening_kernel_size)
+            
+            if apply_bitwise_not:
+                license_plate_crop_thresh= cv2.bitwise_not(license_plate_crop_thresh)
+
+                license_plate_crop_thresh= stretch_vertical(license_plate_crop_thresh, vertical_stretch)
+
+            if apply_straightened_twice:
+                license_plate_crop_thresh, is_straightened2 = straightening_image(license_plate_crop_thresh)
+
+            # read license plate number
+            license_plate_text, license_plate_text_score = read_license_plate(
+                license_plate_crop_thresh)
+
+            if license_plate_text is not None and len(license_plate_text)>=5:
+                # if license_plate_text is not None:
+                if not is_frame_img_made:
+                    frame_image_filename = f"{filename}"
+                    cv2.imwrite(f'{FRAME_IMAGE_FOLDER}/{frame_image_filename}', frame)
+
+                    is_frame_img_made = True
+
+                temp_filename= get_unique_image_name(identifier)
+                car_image_filename = f'car-{temp_filename}'
+                
+                
+                if car_id==-1 or xcar1==-1:
+                    car_image_filename= None
+                else:
+                    # car_image_filename = os.path.join(TEMP_CAR_IMG_DIR, f"car_id:{car_id}-identifier:{identifier}.png")
+                    cv2.imwrite(f'{CAR_IMAGE_FOLDER}/{car_image_filename}', car_crop)
+                    # cv2.imwrite(f'{CAR_IMAGE_FOLDER}/{car_image_filename}', license_plate_crop_thresh)
+                    # cv2.imwrite(car_image_filename, car_crop)
+
+                license_plate_image_filename = temp_filename
+
+                cv2.imwrite(
+                    f'{DETECTION_IMAGE_FOLDER}/{license_plate_image_filename}', license_plate_crop)
+
+                temp_result_dict = {'raw_license_plate_text': license_plate_text,
+                                    'car_img_filename': car_image_filename, 'frame_img_filename': frame_image_filename,
+                                    'license_plate_img_filename': license_plate_image_filename,
+                                    }
+
+                logging.info(
+                    f'Plat kendaraan terekognisi: {license_plate_text}')
+                detection_list.append(temp_result_dict)
+
+    return detection_list, detected_car_history
+
+
+def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None, detect_type= "kamera", loc=None):
     # detect_type= "kamera" | "manual"
+    detected_car_history= np.array([])
+    result_list= []
 
     if temp_image_name is None:
         temp_image_name= temp_img_path
@@ -147,11 +253,19 @@ def detect_plate_on_sent_image(image, temp_img_path, temp_image_name=None, detec
     start_time = time.time()
     logging.info(f'Memulai deteksi ({detect_type}) plat kendaraan pada {temp_image_name} ...')
     
-    result_list = oevlpr_detection(image, filename=temp_img_path, count_runtime=True)
+    # result_list = oevlpr_detection(image, filename=temp_img_path, count_runtime=True)
+    temp_result_list, temp_detected_car_history = oevlpr_detection2(image, filename=temp_img_path, upscale_amount=10, vertical_stretch=0.75, apply_remove_noise=False, apply_straightened_twice=True, apply_bitwise_not=True, apply_opening=True, thresholding_type=1)
 
+    if len(temp_result_list)>0:
+      result_list+=temp_result_list
+
+      if temp_detected_car_history.size>0:
+        detected_car_history= np.array(temp_detected_car_history) if detected_car_history.size == 0 else np.concatenate((detected_car_history, temp_detected_car_history))
+
+        
     for idx, result_dict in enumerate(result_list):
         raw_license_plate_text = result_dict['raw_license_plate_text']
-        validated_raw_plate_text = validate_raw_plate_text(raw_license_plate_text)
+        validated_raw_plate_text = validate_raw_plate_text(raw_license_plate_text, loc)
 
         logging.info(
                     f'Plat kendaraan {raw_license_plate_text} telah divalidasi menjadi {validated_raw_plate_text}')

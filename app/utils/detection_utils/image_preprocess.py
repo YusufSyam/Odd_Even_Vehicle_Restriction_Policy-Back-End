@@ -11,8 +11,7 @@ def straightening_image(image):
     # print('/nLines/n', lines)
 
     if lines is None:
-        print('NOT STRAIGHTENED')
-        return image
+        return image, False
 
     # Temukan sudut rotasi
     for line in lines:
@@ -21,15 +20,14 @@ def straightening_image(image):
             rotation_angle = np.degrees(theta) - 90
             break
     else:
-        print('NOT STRAIGHTENED')
-        return image
+        return image, False
 
     # Rotasi gambar
     rows, cols = image.shape
     M = cv2.getRotationMatrix2D((cols / 2, rows / 2), rotation_angle, 1)
     rotated_img = cv2.warpAffine(image, M, (cols, rows))
 
-    return rotated_img
+    return rotated_img, True
 
 def stretch_vertical(img, height_multiply= 1.5):
     # Dapatkan dimensi asli gambar

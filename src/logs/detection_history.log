@@ -1163,3 +1163,248 @@
 2024-02-14 21:43:48,510 (INFO) - Tortoise-ORM shutdown
 2024-02-14 21:44:00,936 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001DD8F00FF40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
 2024-02-14 21:44:00,936 (INFO) - Tortoise-ORM generating schema
+2024-02-15 02:19:10,303 (INFO) - Tortoise-ORM shutdown
+2024-02-17 20:57:48,923 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026CB8791F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-17 20:57:48,939 (INFO) - Tortoise-ORM generating schema
+2024-02-17 21:00:59,118 (INFO) - Memulai deteksi (manual) plat kendaraan pada IMG_20240217_172900.jpg ...
+2024-02-17 21:01:05,499 (INFO) - Pada IMG_20240217_172900.jpg terdeteksi 4 plat kendaraan
+2024-02-17 21:01:16,301 (INFO) - Plat kendaraan terekognisi: 0
+2024-02-17 21:01:20,685 (INFO) - Plat kendaraan terekognisi: I0:120 +9
+2024-02-17 21:01:23,075 (INFO) - Plat kendaraan terekognisi: 48=
+2024-02-17 21:01:24,664 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:01:24,666 (INFO) - Plat kendaraan 0 telah divalidasi menjadi 0
+2024-02-17 21:01:24,667 (INFO) - Plat kendaraan I0:120 +9 telah divalidasi menjadi IO 120 P
+2024-02-17 21:01:24,669 (INFO) - Plat kendaraan 48= telah divalidasi menjadi 48
+2024-02-17 21:01:24,707 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:01:24,708 (INFO) - Deteksi IMG_20240217_172900.jpg berjalan selama 25.59 detik
+2024-02-17 21:01:24,709 (INFO) - Deteksi IMG_20240217_172900.jpg selesai.
+2024-02-17 21:02:10,667 (INFO) - Memulai deteksi (manual) plat kendaraan pada 2.jpg ...
+2024-02-17 21:02:11,038 (INFO) - Pada 2.jpg terdeteksi 2 plat kendaraan
+2024-02-17 21:02:13,521 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:02:22,082 (INFO) - Plat kendaraan terekognisi: @D:1326:YM
+2024-02-17 21:02:22,082 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:02:22,082 (INFO) - Plat kendaraan @D:1326:YM telah divalidasi menjadi D 1326 YM
+2024-02-17 21:02:22,089 (INFO) - Deteksi 2.jpg berjalan selama 11.42 detik
+2024-02-17 21:02:22,089 (INFO) - Deteksi 2.jpg selesai.
+2024-02-17 21:04:36,539 (INFO) - Memulai deteksi (manual) plat kendaraan pada 3.jpg ...
+2024-02-17 21:04:36,952 (INFO) - Pada 3.jpg terdeteksi 4 plat kendaraan
+2024-02-17 21:04:42,433 (INFO) - Plat kendaraan terekognisi: 0D:1288:{AE
+2024-02-17 21:04:43,921 (INFO) - Plat kendaraan terekognisi: 2861
+2024-02-17 21:04:46,789 (INFO) - Plat kendaraan terekognisi: 2961_
+2024-02-17 21:04:51,569 (INFO) - Plat kendaraan terekognisi: 761,
+2024-02-17 21:04:51,569 (INFO) - Plat kendaraan 0D:1288:{AE telah divalidasi menjadi OD 1288 AE
+2024-02-17 21:04:51,573 (INFO) - Plat kendaraan 2861 telah divalidasi menjadi 2861
+2024-02-17 21:04:51,573 (INFO) - Plat kendaraan 2961_ telah divalidasi menjadi 2961
+2024-02-17 21:04:51,577 (INFO) - Plat kendaraan 761, telah divalidasi menjadi 761
+2024-02-17 21:04:51,577 (INFO) - Deteksi 3.jpg berjalan selama 15.04 detik
+2024-02-17 21:04:51,577 (INFO) - Deteksi 3.jpg selesai.
+2024-02-17 21:05:56,374 (INFO) - Memulai deteksi (manual) plat kendaraan pada 4.jpg ...
+2024-02-17 21:05:56,763 (INFO) - Pada 4.jpg terdeteksi 2 plat kendaraan
+2024-02-17 21:05:59,230 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:06:01,035 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:06:01,035 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:06:01,035 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:06:01,035 (INFO) - Deteksi 4.jpg berjalan selama 4.66 detik
+2024-02-17 21:06:01,043 (INFO) - Deteksi 4.jpg selesai.
+2024-02-17 21:20:50,920 (INFO) - Memulai deteksi (manual) plat kendaraan pada 4.jpg ...
+2024-02-17 21:20:51,318 (INFO) - Pada 4.jpg terdeteksi 2 plat kendaraan
+2024-02-17 21:20:53,879 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:20:55,713 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:20:55,713 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:20:55,715 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:20:55,717 (INFO) - Deteksi 4.jpg berjalan selama 4.80 detik
+2024-02-17 21:20:55,717 (INFO) - Deteksi 4.jpg selesai.
+2024-02-17 21:21:05,752 (INFO) - Memulai deteksi (manual) plat kendaraan pada 5.jpg ...
+2024-02-17 21:21:06,145 (INFO) - Pada 5.jpg terdeteksi 1 plat kendaraan
+2024-02-17 21:21:12,047 (INFO) - Plat kendaraan terekognisi: C':'243
+2024-02-17 21:21:12,047 (INFO) - Plat kendaraan C':'243 telah divalidasi menjadi C 243
+2024-02-17 21:21:12,047 (INFO) - Deteksi 5.jpg berjalan selama 6.30 detik
+2024-02-17 21:21:12,047 (INFO) - Deteksi 5.jpg selesai.
+2024-02-17 21:21:34,909 (INFO) - Memulai deteksi (manual) plat kendaraan pada 6.jpg ...
+2024-02-17 21:21:35,322 (INFO) - Pada 6.jpg terdeteksi 1 plat kendaraan
+2024-02-17 21:21:48,014 (INFO) - Plat kendaraan terekognisi: C':1243:HR
+2024-02-17 21:21:48,015 (INFO) - Plat kendaraan C':1243:HR telah divalidasi menjadi C 1243 HR
+2024-02-17 21:21:48,016 (INFO) - Deteksi 6.jpg berjalan selama 13.11 detik
+2024-02-17 21:21:48,017 (INFO) - Deteksi 6.jpg selesai.
+2024-02-17 21:22:05,711 (INFO) - Memulai deteksi (manual) plat kendaraan pada 7.jpg ...
+2024-02-17 21:22:06,062 (INFO) - Pada 7.jpg terdeteksi 3 plat kendaraan
+2024-02-17 21:22:16,212 (INFO) - Plat kendaraan terekognisi: 00:1612:LG:17-28
+2024-02-17 21:22:20,888 (INFO) - Plat kendaraan terekognisi: Tidak ada deteksi
+2024-02-17 21:22:26,091 (INFO) - Plat kendaraan terekognisi: 1612:LG:02-26
+2024-02-17 21:22:26,091 (INFO) - Plat kendaraan 00:1612:LG:17-28 telah divalidasi menjadi OO 1612 LG
+2024-02-17 21:22:26,095 (INFO) - Plat kendaraan Tidak ada deteksi telah divalidasi menjadi 7104 K
+2024-02-17 21:22:26,097 (INFO) - Plat kendaraan 1612:LG:02-26 telah divalidasi menjadi 1612 LG
+2024-02-17 21:22:26,098 (INFO) - Deteksi 7.jpg berjalan selama 20.39 detik
+2024-02-17 21:22:26,098 (INFO) - Deteksi 7.jpg selesai.
+2024-02-17 22:12:45,380 (INFO) - Memulai deteksi (manual) plat kendaraan pada 8.jpg ...
+2024-02-17 22:12:46,150 (INFO) - Pada 8.jpg terdeteksi 2 plat kendaraan
+2024-02-17 22:13:04,802 (INFO) - Plat kendaraan terekognisi: DD:1612:LG:02-26
+2024-02-17 22:13:18,756 (INFO) - Plat kendaraan terekognisi: 0:{
+2024-02-17 22:13:18,756 (INFO) - Plat kendaraan DD:1612:LG:02-26 telah divalidasi menjadi DD 1612 LG
+2024-02-17 22:13:18,756 (INFO) - Plat kendaraan 0:{ telah divalidasi menjadi 0
+2024-02-17 22:13:18,764 (INFO) - Deteksi 8.jpg berjalan selama 33.38 detik
+2024-02-17 22:13:18,764 (INFO) - Deteksi 8.jpg selesai.
+2024-02-17 22:15:18,833 (INFO) - Memulai deteksi (manual) plat kendaraan pada 9.jpg ...
+2024-02-17 22:15:19,674 (INFO) - Pada 9.jpg terdeteksi 2 plat kendaraan
+2024-02-17 22:15:40,966 (INFO) - Plat kendaraan terekognisi: DD:1546:YE:0*26
+2024-02-17 22:15:57,553 (INFO) - Plat kendaraan terekognisi: BS5:4114:1I
+2024-02-17 22:15:57,553 (INFO) - Plat kendaraan DD:1546:YE:0*26 telah divalidasi menjadi DD 1546 YE
+2024-02-17 22:15:57,561 (INFO) - Plat kendaraan BS5:4114:1I telah divalidasi menjadi BSS 4114 II
+2024-02-17 22:15:57,564 (INFO) - Deteksi 9.jpg berjalan selama 38.73 detik
+2024-02-17 22:15:57,564 (INFO) - Deteksi 9.jpg selesai.
+2024-02-18 00:15:20,838 (INFO) - Memulai deteksi (manual) plat kendaraan pada 12.jpg ...
+2024-02-18 00:15:24,360 (INFO) - Pada 12.jpg terdeteksi 2 plat kendaraan
+2024-02-18 00:15:34,315 (INFO) - Plat kendaraan terekognisi: @d:1213:Ry:U
+2024-02-18 00:15:36,410 (INFO) - Plat kendaraan terekognisi: 00:n
+2024-02-18 00:15:36,410 (INFO) - Plat kendaraan @d:1213:Ry:U telah divalidasi menjadi D 1213 RY
+2024-02-18 00:15:36,410 (INFO) - Plat kendaraan 00:n telah divalidasi menjadi 00 N
+2024-02-18 00:15:36,418 (INFO) - Deteksi 12.jpg berjalan selama 15.58 detik
+2024-02-18 00:15:36,418 (INFO) - Deteksi 12.jpg selesai.
+2024-02-18 00:16:10,677 (INFO) - Memulai deteksi (manual) plat kendaraan pada 12.jpg ...
+2024-02-18 00:16:11,061 (INFO) - Pada 12.jpg terdeteksi 2 plat kendaraan
+2024-02-18 00:16:19,739 (INFO) - Plat kendaraan terekognisi: @d:1213:Ry:U
+2024-02-18 00:16:22,386 (INFO) - Plat kendaraan terekognisi: 00:n
+2024-02-18 00:16:22,386 (INFO) - Plat kendaraan @d:1213:Ry:U telah divalidasi menjadi D 1213 RY
+2024-02-18 00:16:22,394 (INFO) - Plat kendaraan 00:n telah divalidasi menjadi 00 N
+2024-02-18 00:16:22,396 (INFO) - Deteksi 12.jpg berjalan selama 11.72 detik
+2024-02-18 00:16:22,396 (INFO) - Deteksi 12.jpg selesai.
+2024-02-18 00:17:01,250 (INFO) - Memulai deteksi (manual) plat kendaraan pada 12.jpg ...
+2024-02-18 00:17:01,635 (INFO) - Pada 12.jpg terdeteksi 2 plat kendaraan
+2024-02-18 00:17:10,306 (INFO) - Plat kendaraan terekognisi: @d:1213:Ry:U
+2024-02-18 00:17:12,991 (INFO) - Plat kendaraan terekognisi: 00:n
+2024-02-18 00:17:12,993 (INFO) - Plat kendaraan @d:1213:Ry:U telah divalidasi menjadi D 1213 RY
+2024-02-18 00:17:12,993 (INFO) - Plat kendaraan 00:n telah divalidasi menjadi 00 N
+2024-02-18 00:17:12,993 (INFO) - Deteksi 12.jpg berjalan selama 11.74 detik
+2024-02-18 00:17:12,993 (INFO) - Deteksi 12.jpg selesai.
+2024-02-18 00:29:30,862 (INFO) - Memulai deteksi (manual) plat kendaraan pada 8.jpg ...
+2024-02-18 00:29:31,274 (INFO) - Pada 8.jpg terdeteksi 2 plat kendaraan
+2024-02-18 00:29:42,897 (INFO) - Plat kendaraan terekognisi: DD:1612:LG:02-26
+2024-02-18 00:29:52,572 (INFO) - Plat kendaraan terekognisi: 0:{
+2024-02-18 00:29:52,574 (INFO) - Plat kendaraan DD:1612:LG:02-26 telah divalidasi menjadi DD 1612 LG
+2024-02-18 00:29:52,574 (INFO) - Plat kendaraan 0:{ telah divalidasi menjadi 0
+2024-02-18 00:29:52,577 (INFO) - Deteksi 8.jpg berjalan selama 21.71 detik
+2024-02-18 00:29:52,577 (INFO) - Deteksi 8.jpg selesai.
+2024-02-18 00:37:19,691 (INFO) - Tortoise-ORM shutdown
+2024-02-18 00:38:27,707 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001CAEAD10F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-18 00:38:27,707 (INFO) - Tortoise-ORM generating schema
+2024-02-19 13:25:18,631 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001CC4AEA1F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 13:25:18,649 (INFO) - Tortoise-ORM generating schema
+2024-02-19 15:34:06,277 (INFO) - Memulai deteksi (manual) plat kendaraan pada 15.jpg ...
+2024-02-19 15:34:12,555 (INFO) - Pada 15.jpg terdeteksi 2 plat kendaraan
+2024-02-19 15:34:18,390 (INFO) - Plat kendaraan terekognisi: 10:1258:2
+2024-02-19 15:34:22,402 (INFO) - Plat kendaraan terekognisi: 0:1358:07
+2024-02-19 15:34:22,410 (INFO) - Plat kendaraan 10:1258:2 telah divalidasi menjadi IO 1258 Z
+2024-02-19 15:34:22,412 (INFO) - Plat kendaraan 0:1358:07 telah divalidasi menjadi O 1358 OT
+2024-02-19 15:34:22,412 (INFO) - Deteksi 15.jpg berjalan selama 16.13 detik
+2024-02-19 15:34:22,412 (INFO) - Deteksi 15.jpg selesai.
+2024-02-19 15:34:45,531 (INFO) - Memulai deteksi (manual) plat kendaraan pada 14.jpg ...
+2024-02-19 15:34:45,914 (INFO) - Pada 14.jpg terdeteksi 2 plat kendaraan
+2024-02-19 15:34:50,571 (INFO) - Plat kendaraan terekognisi: DD:885:Jo:12-3
+2024-02-19 15:34:52,749 (INFO) - Plat kendaraan terekognisi: DD:1366:08-27
+2024-02-19 15:34:52,749 (INFO) - Plat kendaraan DD:885:Jo:12-3 telah divalidasi menjadi DD 885 JO
+2024-02-19 15:34:52,749 (INFO) - Plat kendaraan DD:1366:08-27 telah divalidasi menjadi DD 1366 OB
+2024-02-19 15:34:52,749 (INFO) - Deteksi 14.jpg berjalan selama 7.22 detik
+2024-02-19 15:34:52,749 (INFO) - Deteksi 14.jpg selesai.
+2024-02-19 15:41:53,389 (INFO) - Memulai deteksi (manual) plat kendaraan pada 14.jpg ...
+2024-02-19 15:41:53,774 (INFO) - Pada 14.jpg terdeteksi 2 plat kendaraan
+2024-02-19 15:41:58,144 (INFO) - Plat kendaraan terekognisi: DD:885:Jo:12-3
+2024-02-19 15:42:00,195 (INFO) - Plat kendaraan terekognisi: DD:1366:08-27
+2024-02-19 15:42:00,195 (INFO) - Plat kendaraan DD:885:Jo:12-3 telah divalidasi menjadi DD 885 JO
+2024-02-19 15:42:00,196 (INFO) - Plat kendaraan DD:1366:08-27 telah divalidasi menjadi DD 1366 OB
+2024-02-19 15:42:00,196 (INFO) - Deteksi 14.jpg berjalan selama 6.81 detik
+2024-02-19 15:42:00,196 (INFO) - Deteksi 14.jpg selesai.
+2024-02-19 15:42:34,128 (INFO) - Memulai deteksi (manual) plat kendaraan pada 14.jpg ...
+2024-02-19 15:42:34,543 (INFO) - Pada 14.jpg terdeteksi 2 plat kendaraan
+2024-02-19 15:42:38,565 (INFO) - Plat kendaraan terekognisi: DD:885:Jo:12-3
+2024-02-19 15:42:41,249 (INFO) - Plat kendaraan terekognisi: DD:1366:08-27
+2024-02-19 15:42:41,249 (INFO) - Plat kendaraan DD:885:Jo:12-3 telah divalidasi menjadi DD 885 JO
+2024-02-19 15:42:41,251 (INFO) - Plat kendaraan DD:1366:08-27 telah divalidasi menjadi DD 1366 OB
+2024-02-19 15:42:41,255 (INFO) - Deteksi 14.jpg berjalan selama 7.13 detik
+2024-02-19 15:42:41,255 (INFO) - Deteksi 14.jpg selesai.
+2024-02-19 16:55:04,957 (INFO) - Memulai deteksi (manual) plat kendaraan pada 8.jpg ...
+2024-02-19 16:55:05,558 (INFO) - Pada 8.jpg terdeteksi 2 plat kendaraan
+2024-02-19 16:55:10,828 (INFO) - Plat kendaraan terekognisi: Do:1612:LG
+2024-02-19 16:55:11,889 (INFO) - Plat kendaraan terekognisi: 63
+2024-02-19 16:55:11,897 (INFO) - Plat kendaraan Do:1612:LG telah divalidasi menjadi DO 1612 LG
+2024-02-19 16:55:11,899 (INFO) - Plat kendaraan 63 telah divalidasi menjadi 63
+2024-02-19 16:55:11,899 (INFO) - Deteksi 8.jpg berjalan selama 6.94 detik
+2024-02-19 16:55:11,899 (INFO) - Deteksi 8.jpg selesai.
+2024-02-19 20:25:07,422 (INFO) - Tortoise-ORM shutdown
+2024-02-19 20:25:42,685 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001619A900F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 20:25:42,685 (INFO) - Tortoise-ORM generating schema
+2024-02-19 20:37:21,862 (INFO) - Tortoise-ORM shutdown
+2024-02-19 20:41:26,906 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000113CEEA1F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 20:41:26,906 (INFO) - Tortoise-ORM generating schema
+2024-02-19 20:59:59,380 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:00:11,106 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B96E074F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:00:11,106 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:00:26,107 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:00:30,090 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:02:34,997 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:02:44,711 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000025241EC3F70>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:02:44,711 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:02:44,763 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:02:45,623 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:05:25,878 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:05:26,222 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:05:33,134 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:05:33,874 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:06:17,428 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:06:29,442 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000023FA99E1EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:06:29,442 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:06:29,504 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:06:30,966 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:07:13,224 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:07:13,555 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:07:16,504 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:07:29,201 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002417BAF4EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:07:29,201 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:07:29,240 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:07:30,119 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:07:49,544 (INFO) - Plat kendaraan terekognisi: 1612:LG:86:Dd
+2024-02-19 21:07:53,457 (INFO) - Plat kendaraan terekognisi: 7
+2024-02-19 21:07:53,457 (INFO) - Plat kendaraan 1612:LG:86:Dd telah divalidasi menjadi 1612 LG
+2024-02-19 21:07:53,457 (INFO) - Plat kendaraan 7 telah divalidasi menjadi 7
+2024-02-19 21:07:53,465 (INFO) - Deteksi test (9).jpg berjalan selama 24.22 detik
+2024-02-19 21:07:53,465 (INFO) - Deteksi test (9).jpg selesai.
+2024-02-19 21:10:17,571 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:10:28,485 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002077E282EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:10:28,485 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:10:59,236 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:11:11,349 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000235F2B41EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:11:11,349 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:11:11,651 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:11:12,910 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:11:25,911 (INFO) - Plat kendaraan terekognisi: 1612:LG:86:Dd
+2024-02-19 21:11:31,109 (INFO) - Plat kendaraan terekognisi: 7
+2024-02-19 21:11:31,110 (INFO) - Plat kendaraan 1612:LG:86:Dd telah divalidasi menjadi DD 1612 LG
+2024-02-19 21:11:31,113 (INFO) - Plat kendaraan 7 telah divalidasi menjadi DD 7
+2024-02-19 21:11:31,114 (INFO) - Deteksi test (9).jpg berjalan selama 19.46 detik
+2024-02-19 21:11:31,114 (INFO) - Deteksi test (9).jpg selesai.
+2024-02-19 21:12:21,788 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:12:32,152 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001E376324EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:12:32,152 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:12:32,216 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (9).jpg ...
+2024-02-19 21:12:33,759 (INFO) - Pada test (9).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:12:46,644 (INFO) - Plat kendaraan terekognisi: 1612:LG:86:Dd
+2024-02-19 21:12:50,037 (INFO) - Plat kendaraan 1612:LG:86:Dd telah divalidasi menjadi DD 1612 LG
+2024-02-19 21:12:50,037 (INFO) - Deteksi test (9).jpg berjalan selama 17.82 detik
+2024-02-19 21:12:50,037 (INFO) - Deteksi test (9).jpg selesai.
+2024-02-19 21:14:50,428 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (1).jpg ...
+2024-02-19 21:14:50,810 (INFO) - Pada test (1).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:14:59,326 (INFO) - Plat kendaraan terekognisi: dD:1546:YE:06.26
+2024-02-19 21:14:59,327 (INFO) - Plat kendaraan dD:1546:YE:06.26 telah divalidasi menjadi DD 1546 YE
+2024-02-19 21:14:59,329 (INFO) - Deteksi test (1).jpg berjalan selama 8.90 detik
+2024-02-19 21:14:59,329 (INFO) - Deteksi test (1).jpg selesai.
+2024-02-19 21:15:41,628 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:15:54,087 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001EE014B4EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:15:54,087 (INFO) - Tortoise-ORM generating schema
+2024-02-19 21:17:03,109 (INFO) - Memulai deteksi (manual) plat kendaraan pada test (2).jpg ...
+2024-02-19 21:17:03,978 (INFO) - Pada test (2).jpg terdeteksi 2 plat kendaraan
+2024-02-19 21:17:08,838 (INFO) - Plat kendaraan terekognisi: M:I413:Ry
+2024-02-19 21:17:09,261 (INFO) - Plat kendaraan M:I413:Ry telah divalidasi menjadi M 1413 RY
+2024-02-19 21:17:09,261 (INFO) - Deteksi test (2).jpg berjalan selama 6.15 detik
+2024-02-19 21:17:09,261 (INFO) - Deteksi test (2).jpg selesai.
+2024-02-19 21:21:18,164 (INFO) - Tortoise-ORM shutdown
+2024-02-19 21:21:30,935 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000013774E53EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-19 21:21:30,935 (INFO) - Tortoise-ORM generating schema

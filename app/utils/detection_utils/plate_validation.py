@@ -42,11 +42,20 @@ dict_int_to_char = {'0': 'O',
                     '8':'B',
                     '9': 'P'}
 
+start_plate_char_dict={
+    'sulsel':'DD'
+}
+
 def ganti_karakter(input_string, char_to_int_dict):
     hasil = ''.join(char_to_int_dict.get(char, char) for char in input_string)
     return hasil
 
-import re
+def ganti_karakter_awal(input_string, loc=None):
+    global start_plate_char_dict
+    if loc is None or loc not in start_plate_char_dict.keys():
+      return input_string
+    
+    return start_plate_char_dict[loc]
 
 def ambil_huruf_terbatas(input_string, min= 1, max= 3):
     pattern = re.compile(f'[a-zA-Z]{{{min},{max}}}')
@@ -84,7 +93,7 @@ def pisah_string(input_string, max_pattern=4):
         return None
 
 
-def validate_raw_plate_text(text):
+def validate_raw_plate_text(text, loc='sulsel'):
   # print('=======================================\n')
   # print(text)
 
@@ -110,6 +119,9 @@ def validate_raw_plate_text(text):
   # print(start, mid, end)
 
   start= ambil_huruf_terbatas(start)
+  if loc is not None:
+    start= ganti_karakter_awal(start, loc)
+
   end= ambil_huruf_terbatas(end)
 
   start, mid, end= map(filter_huruf_dan_angka, [start, mid, end])
