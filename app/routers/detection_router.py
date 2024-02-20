@@ -229,7 +229,7 @@ async def upload_manual_detection_file(
 
     image = cv2.imread(f'{TEMPORARY_IMAGE_FOLDER}/{image_name}')
 
-    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name, detect_type="manual")
+    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name, detect_type="kamera", loc="sulsel")
 
     delete_image_if_exists(TEMPORARY_IMAGE_FOLDER, image_name)
 
