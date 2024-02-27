@@ -213,3 +213,18 @@
 2024-02-27 17:27:22,135 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000023330E13EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
 2024-02-27 17:27:22,136 (INFO) - Tortoise-ORM generating schema
 2024-02-27 17:27:32,874 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:28:04,013 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000019E56982F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:28:04,013 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:28:04,027 (INFO) - Memulai deteksi (kamera) plat kendaraan pada AB_1364_AN - Copy.png ...
+2024-02-27 17:28:04,890 (INFO) - Pada AB_1364_AN - Copy.png terdeteksi 1 plat kendaraan
+2024-02-27 17:28:08,378 (INFO) - Plat kendaraan terekognisi: AB:1362:An:10 .20
+2024-02-27 17:28:08,378 (INFO) - Plat kendaraan AB:1362:An:10 .20 telah divalidasi menjadi KH 1362 AN
+2024-02-27 17:28:08,378 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 4.35 detik
+2024-02-27 17:28:08,378 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
+2024-02-27 17:31:27,304 (INFO) - Memulai deteksi (kamera) plat kendaraan pada AB_1364_AN - Copy.png ...
+2024-02-27 17:31:27,678 (INFO) - Pada AB_1364_AN - Copy.png terdeteksi 1 plat kendaraan
+2024-02-27 17:31:30,243 (INFO) - Plat kendaraan terekognisi: AB:1362:An:10 .20
+2024-02-27 17:31:30,243 (INFO) - Plat kendaraan AB:1362:An:10 .20 telah divalidasi menjadi KB 1362 AN
+2024-02-27 17:31:30,243 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 2.94 detik
+2024-02-27 17:31:30,243 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
+2024-02-27 19:14:00,481 (INFO) - Tortoise-ORM shutdown

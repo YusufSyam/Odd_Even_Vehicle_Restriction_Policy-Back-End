@@ -218,7 +218,7 @@ async def get_detector_card_all():
 
 @router.get('/history/detection-summary/{detector_id}')
 async def get_detection_history_summary_by_detector(detector_id: int):
-    sql_query = f"SELECT id, detectionDate, COUNT(*) AS passingVehicleTotal, SUM(isViolating) AS detectedViolatorTotal, SUM(plateType = 'genap') AS evenPlatedVehicle, SUM(plateType = 'ganjil') AS oddPlatedVehicle FROM detection WHERE detector_id = {detector_id} GROUP BY detectionDate ORDER BY detectionDate"
+    sql_query = f"SELECT id, detectionDate, COUNT(*) AS passingVehicleTotal, SUM(isViolating) AS detectedViolatorTotal, SUM(plateType = 'genap') AS evenPlatedVehicle, SUM(plateType = 'ganjil') AS oddPlatedVehicle FROM detection WHERE detector_id = {detector_id} GROUP BY detectionDate ORDER BY detectionDate DESC"
     temp_detection_summary = await Tortoise.get_connection("default").execute_query(sql_query)
 
     detection_summary = list(temp_detection_summary)[-1]
