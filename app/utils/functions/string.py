@@ -24,3 +24,14 @@ def get_detector_id(string, delimiter=None):
     return -1
 
 
+def decode_sent_image(input_string):
+  input_string = input_string.replace(".png", "")
+
+  substrings = input_string.split("#####")
+  result_dict = {}
+
+  for substring in substrings:
+      key, value = substring.split(":", 1)
+      result_dict[key] = value
+
+  return result_dict

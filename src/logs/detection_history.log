@@ -66,3 +66,150 @@
 2024-02-20 08:11:19,356 (INFO) - Plat kendaraan I0:1376:Y telah divalidasi menjadi DD 1376 Y
 2024-02-20 08:11:19,356 (INFO) - Deteksi IMG_20240217_172900.jpg berjalan selama 64.26 detik
 2024-02-20 08:11:19,356 (INFO) - Deteksi IMG_20240217_172900.jpg selesai.
+2024-02-20 13:23:23,595 (INFO) - Tortoise-ORM shutdown
+2024-02-22 11:50:23,123 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000020C0CFD2EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-22 11:50:23,149 (INFO) - Tortoise-ORM generating schema
+2024-02-22 12:03:50,570 (INFO) - Tortoise-ORM shutdown
+2024-02-27 14:10:13,864 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002691F493EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 14:10:13,884 (INFO) - Tortoise-ORM generating schema
+2024-02-27 14:19:02,766 (INFO) - Tortoise-ORM shutdown
+2024-02-27 14:19:17,963 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000020E6FC64FA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 14:19:18,007 (INFO) - Tortoise-ORM generating schema
+2024-02-27 14:28:20,059 (INFO) - Tortoise-ORM shutdown
+2024-02-27 14:28:35,324 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001F69227AD90>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 14:28:35,324 (INFO) - Tortoise-ORM generating schema
+2024-02-27 14:35:00,945 (INFO) - Tortoise-ORM shutdown
+2024-02-27 14:35:18,215 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D44EB8AD90>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 14:35:18,215 (INFO) - Tortoise-ORM generating schema
+2024-02-27 14:48:59,638 (INFO) - Tortoise-ORM shutdown
+2024-02-27 14:50:28,026 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000224A8475460>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 14:50:28,026 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:05:07,607 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:05:23,680 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000286841E9E50>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:05:23,680 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:11:27,217 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:11:43,711 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000289A3239D90>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:11:43,711 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:14:36,465 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:14:53,129 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D9FCB1AD90>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:14:53,131 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:15:30,245 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:15:49,498 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001B5FBDB9E20>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:15:49,498 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:18:06,907 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:18:24,945 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002918D02BA90>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:18:24,945 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:20:03,859 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:20:20,984 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000020EEE9172B0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:20:20,984 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:22:06,197 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:22:26,093 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000022E234172E0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:22:26,093 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:23:03,001 (INFO) - Tortoise-ORM shutdown
+2024-02-27 15:23:21,438 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000022143CD4EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 15:23:21,438 (INFO) - Tortoise-ORM generating schema
+2024-02-27 15:23:21,688 (INFO) - Memulai deteksi (kamera) plat kendaraan pada _MG_3021i yusuf - Copy - Copy (2).jpg ...
+2024-02-27 15:23:27,035 (INFO) - Pada _MG_3021i yusuf - Copy - Copy (2).jpg terdeteksi 0 plat kendaraan
+2024-02-27 15:23:27,035 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2).jpg berjalan selama 5.35 detik
+2024-02-27 15:23:27,035 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2).jpg selesai.
+2024-02-27 15:23:46,489 (INFO) - Memulai deteksi (kamera) plat kendaraan pada Wartime_picture_of_a_Bletchley_Park_Bombe.jpg ...
+2024-02-27 15:23:46,936 (INFO) - Pada Wartime_picture_of_a_Bletchley_Park_Bombe.jpg terdeteksi 1 plat kendaraan
+2024-02-27 15:23:46,936 (INFO) - Deteksi Wartime_picture_of_a_Bletchley_Park_Bombe.jpg berjalan selama 0.45 detik
+2024-02-27 15:23:46,936 (INFO) - Deteksi Wartime_picture_of_a_Bletchley_Park_Bombe.jpg selesai.
+2024-02-27 15:53:52,246 (INFO) - Memulai deteksi (kamera) plat kendaraan pada name.png ...
+2024-02-27 15:53:52,629 (INFO) - Pada name.png terdeteksi 1 plat kendaraan
+2024-02-27 15:53:52,629 (INFO) - Deteksi name.png berjalan selama 0.38 detik
+2024-02-27 15:53:52,629 (INFO) - Deteksi name.png selesai.
+2024-02-27 15:54:08,179 (INFO) - Memulai deteksi (kamera) plat kendaraan pada name.png ...
+2024-02-27 15:54:08,638 (INFO) - Pada name.png terdeteksi 1 plat kendaraan
+2024-02-27 15:54:08,638 (INFO) - Deteksi name.png berjalan selama 0.46 detik
+2024-02-27 15:54:08,638 (INFO) - Deteksi name.png selesai.
+2024-02-27 15:55:11,289 (INFO) - Memulai deteksi (kamera) plat kendaraan pada pasdalkjdklasndklan.png ...
+2024-02-27 15:55:11,724 (INFO) - Pada pasdalkjdklasndklan.png terdeteksi 0 plat kendaraan
+2024-02-27 15:55:11,724 (INFO) - Deteksi pasdalkjdklasndklan.png berjalan selama 0.43 detik
+2024-02-27 15:55:11,724 (INFO) - Deteksi pasdalkjdklasndklan.png selesai.
+2024-02-27 15:55:19,667 (INFO) - Memulai deteksi (kamera) plat kendaraan pada pasdalkjdklasndklan.png ...
+2024-02-27 15:55:20,073 (INFO) - Pada pasdalkjdklasndklan.png terdeteksi 0 plat kendaraan
+2024-02-27 15:55:20,073 (INFO) - Deteksi pasdalkjdklasndklan.png berjalan selama 0.41 detik
+2024-02-27 15:55:20,083 (INFO) - Deteksi pasdalkjdklasndklan.png selesai.
+2024-02-27 16:05:26,851 (INFO) - Memulai deteksi (kamera) plat kendaraan pada image###Sulsel.png ...
+2024-02-27 16:05:27,431 (INFO) - Pada image###Sulsel.png terdeteksi 0 plat kendaraan
+2024-02-27 16:05:27,431 (INFO) - Deteksi image###Sulsel.png berjalan selama 0.58 detik
+2024-02-27 16:05:27,431 (INFO) - Deteksi image###Sulsel.png selesai.
+2024-02-27 16:08:15,158 (INFO) - Memulai deteksi (kamera) plat kendaraan pada image###sulsel.png ...
+2024-02-27 16:08:15,491 (INFO) - Pada image###sulsel.png terdeteksi 0 plat kendaraan
+2024-02-27 16:08:15,491 (INFO) - Deteksi image###sulsel.png berjalan selama 0.33 detik
+2024-02-27 16:08:15,491 (INFO) - Deteksi image###sulsel.png selesai.
+2024-02-27 16:43:01,203 (INFO) - Memulai deteksi (kamera) plat kendaraan pada _MG_3021i yusuf - Copy - Copy (2).jpg#####location:undefined.png ...
+2024-02-27 16:43:01,604 (INFO) - Pada _MG_3021i yusuf - Copy - Copy (2).jpg#####location:undefined.png terdeteksi 0 plat kendaraan
+2024-02-27 16:43:01,604 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2).jpg#####location:undefined.png berjalan selama 0.40 detik
+2024-02-27 16:43:01,604 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2).jpg#####location:undefined.png selesai.
+2024-02-27 16:43:42,250 (INFO) - Memulai deteksi (kamera) plat kendaraan pada _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png ...
+2024-02-27 16:43:42,648 (INFO) - Pada _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png terdeteksi 0 plat kendaraan
+2024-02-27 16:43:42,648 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png berjalan selama 0.40 detik
+2024-02-27 16:43:42,648 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png selesai.
+2024-02-27 16:54:26,475 (INFO) - Memulai deteksi (kamera) plat kendaraan pada _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png ...
+2024-02-27 16:54:26,888 (INFO) - Pada _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png terdeteksi 0 plat kendaraan
+2024-02-27 16:54:26,888 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png berjalan selama 0.41 detik
+2024-02-27 16:54:26,888 (INFO) - Deteksi _MG_3021i yusuf - Copy - Copy (2)#####location:sulsel.png selesai.
+2024-02-27 17:02:39,855 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:03:12,207 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D69C933F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:03:12,207 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:03:23,942 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:03:41,109 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001D4BAEB3F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:03:41,109 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:05:18,864 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:05:35,673 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000230C7284EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:05:35,673 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:05:55,896 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:06:11,696 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001921D734EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:06:11,696 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:19:39,986 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:19:56,421 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000254E15D3F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:19:56,421 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:20:48,269 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:21:04,629 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000019778964EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:21:04,629 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:21:51,655 (INFO) - Memulai deteksi (kamera) plat kendaraan pada AB_1364_AN - Copy.png ...
+2024-02-27 17:21:52,636 (INFO) - Pada AB_1364_AN - Copy.png terdeteksi 1 plat kendaraan
+2024-02-27 17:21:58,021 (INFO) - Plat kendaraan terekognisi: AB:1362:An:10 .20
+2024-02-27 17:21:58,021 (INFO) - Plat kendaraan AB:1362:An:10 .20 telah divalidasi menjadi AB 1362 AN
+2024-02-27 17:21:58,021 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 6.37 detik
+2024-02-27 17:21:58,021 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
+2024-02-27 17:22:42,674 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:22:59,192 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000017366AD4F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:22:59,192 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:22:59,242 (INFO) - Memulai deteksi (kamera) plat kendaraan pada AB_1364_AN - Copy.png ...
+2024-02-27 17:23:00,135 (INFO) - Pada AB_1364_AN - Copy.png terdeteksi 1 plat kendaraan
+2024-02-27 17:23:03,646 (INFO) - Plat kendaraan terekognisi: AB:1362:An:10 .20
+2024-02-27 17:23:03,646 (INFO) - Plat kendaraan AB:1362:An:10 .20 telah divalidasi menjadi AB 1362 AN
+2024-02-27 17:23:03,646 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 4.40 detik
+2024-02-27 17:23:03,646 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
+2024-02-27 17:23:19,269 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:23:35,972 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000271DD0A5EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:23:35,972 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:23:35,985 (INFO) - Memulai deteksi (kamera) plat kendaraan pada AB_1364_AN - Copy.png ...
+2024-02-27 17:23:36,899 (INFO) - Pada AB_1364_AN - Copy.png terdeteksi 1 plat kendaraan
+2024-02-27 17:23:40,366 (INFO) - Plat kendaraan terekognisi: AB:1362:An:10 .20
+2024-02-27 17:23:40,366 (INFO) - Plat kendaraan AB:1362:An:10 .20 telah divalidasi menjadi AB 1362 AN
+2024-02-27 17:23:40,366 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 4.38 detik
+2024-02-27 17:23:40,366 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
+2024-02-27 17:24:23,675 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:24:40,998 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002AE4A5B4F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:24:40,998 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:25:03,170 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:25:20,153 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000002695F525EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:25:20,153 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:25:20,160 (INFO) - Memulai deteksi (kamera) plat kendaraan pada AB_1364_AN - Copy.png ...
+2024-02-27 17:25:21,828 (INFO) - Pada AB_1364_AN - Copy.png terdeteksi 1 plat kendaraan
+2024-02-27 17:25:24,539 (INFO) - Plat kendaraan terekognisi: AB:1362:An:10 .20
+2024-02-27 17:25:24,539 (INFO) - Plat kendaraan AB:1362:An:10 .20 telah divalidasi menjadi KH 1362 AN
+2024-02-27 17:25:24,539 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 4.38 detik
+2024-02-27 17:25:24,539 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
+2024-02-27 17:26:19,062 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:26:36,103 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001A8C2FC3EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:26:36,103 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:27:04,085 (INFO) - Tortoise-ORM shutdown
+2024-02-27 17:27:22,135 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000023330E13EB0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 17:27:22,136 (INFO) - Tortoise-ORM generating schema
+2024-02-27 17:27:32,874 (INFO) - Tortoise-ORM shutdown

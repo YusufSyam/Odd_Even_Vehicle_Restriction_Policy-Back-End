@@ -11,7 +11,7 @@ from app.models.detection_model import *
 
 from app.utils.const.directory import DETECTION_IMAGE_FOLDER, TEMPORARY_IMAGE_FOLDER, CAR_IMAGE_FOLDER, FRAME_IMAGE_FOLDER
 from app.utils.const.dummy import dummy_new_detection
-from app.utils.functions.string import get_unique_image_name, generate_unique_string, get_detector_id
+from app.utils.functions.string import get_unique_image_name, generate_unique_string, get_detector_id, decode_sent_image
 from app.utils.functions.file import delete_image_if_exists, decode_and_save_image, save_image
 from app.utils.functions.date import parse_date_detection
 
@@ -191,6 +191,9 @@ async def delete_detection(detection_id: int):
 
     delete_image_if_exists(DETECTION_IMAGE_FOLDER,
                            selected_detection.imagePath)
+    delete_image_if_exists(CAR_IMAGE_FOLDER,
+                           selected_detection.carImagePath)
+
     await selected_detection.delete()
 
     return {
@@ -224,12 +227,17 @@ async def get_detection_by_detector_time(detector_id: int, date: str):
 async def upload_manual_detection_file(
     file: UploadFile = File(...)
 ):
-    image_name= file.filename
+    image_info_dict= decode_sent_image(file.filename)
+    image_name= f"{image_info_dict['filename']}.png"
+    location= image_info_dict['location'] if 'location' in image_info_dict.keys() else None
+    print('image_name',image_name)
+    print('location',location)
+    
     save_image(file.file.read(), image_name, TEMPORARY_IMAGE_FOLDER)
 
     image = cv2.imread(f'{TEMPORARY_IMAGE_FOLDER}/{image_name}')
 
-    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name, detect_type="kamera", loc="sulsel")
+    detection_result= detect_plate_on_sent_image(image, temp_img_path=image_name, detect_type="kamera", loc=location)
 
     delete_image_if_exists(TEMPORARY_IMAGE_FOLDER, image_name)
 
