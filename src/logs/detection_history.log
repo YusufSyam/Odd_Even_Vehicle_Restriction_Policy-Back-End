@@ -228,3 +228,153 @@
 2024-02-27 17:31:30,243 (INFO) - Deteksi AB_1364_AN - Copy.png berjalan selama 2.94 detik
 2024-02-27 17:31:30,243 (INFO) - Deteksi AB_1364_AN - Copy.png selesai.
 2024-02-27 19:14:00,481 (INFO) - Tortoise-ORM shutdown
+2024-02-27 19:14:16,467 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x00000222C2671FA0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-27 19:14:16,499 (INFO) - Tortoise-ORM generating schema
+2024-02-27 20:24:41,851 (INFO) - Tortoise-ORM shutdown
+2024-02-29 11:54:05,337 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000017336870F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-29 11:54:05,379 (INFO) - Tortoise-ORM generating schema
+2024-02-29 12:02:16,744 (INFO) - Tortoise-ORM shutdown
+2024-02-29 12:02:27,727 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001E10E662F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-29 12:02:27,727 (INFO) - Tortoise-ORM generating schema
+2024-02-29 12:30:09,845 (INFO) - Tortoise-ORM shutdown
+2024-02-29 12:30:24,652 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x000001F96C213F40>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-29 12:30:24,652 (INFO) - Tortoise-ORM generating schema
+2024-02-29 12:42:51,198 (INFO) - Tortoise-ORM shutdown
+2024-02-29 12:43:08,531 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026BE3660EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-29 12:43:08,531 (INFO) - Tortoise-ORM generating schema
+2024-02-29 12:53:09,436 (INFO) - Tortoise-ORM shutdown
+2024-02-29 12:58:52,311 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000022FC7E03EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-29 12:58:52,311 (INFO) - Tortoise-ORM generating schema
+2024-02-29 12:58:56,545 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:03,157 (INFO) - Pada fe940374-8ce8-4b6e-b24b-32c6aca81bc7_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:03,157 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 6.61 detik
+2024-02-29 12:59:03,157 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:04,424 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:04,753 (INFO) - Pada d5ed5088-3ec3-4e1e-b4a1-730706596ba7_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:04,753 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.33 detik
+2024-02-29 12:59:04,753 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:06,135 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:06,421 (INFO) - Pada 5bbb2703-dff0-4b75-a354-91a724bbf528_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:06,422 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.29 detik
+2024-02-29 12:59:06,422 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:07,772 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:08,078 (INFO) - Pada de98dc19-bf80-41c9-8a24-552f33407418_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:08,078 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.31 detik
+2024-02-29 12:59:08,078 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:09,325 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:09,704 (INFO) - Pada 92d613a7-4094-42c7-a298-44aca9c89db1_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:09,704 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.38 detik
+2024-02-29 12:59:09,704 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:11,048 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:11,322 (INFO) - Pada 1c089e4f-be9d-41ee-80b5-bd1b52862e12_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:11,322 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.27 detik
+2024-02-29 12:59:11,322 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:14,610 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:14,921 (INFO) - Pada 1aba69d8-a4a7-4b03-966f-97c61c24209f_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:14,921 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.31 detik
+2024-02-29 12:59:14,921 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:16,251 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:16,554 (INFO) - Pada a911fc16-adef-4b8e-8515-59c707ccb224_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:16,554 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.30 detik
+2024-02-29 12:59:16,554 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:17,941 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:18,256 (INFO) - Pada 7fc3cd16-e636-43d2-90e3-9a6f4fdfaac7_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:18,256 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.32 detik
+2024-02-29 12:59:18,256 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:19,561 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:19,828 (INFO) - Pada ffb0ee4f-4f44-4c45-85fc-54ad0af1a115_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:19,829 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.27 detik
+2024-02-29 12:59:19,830 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:21,349 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:21,653 (INFO) - Pada 0d7de499-123a-4229-9d8e-6cd6fe471185_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:21,653 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.30 detik
+2024-02-29 12:59:21,653 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:22,972 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:23,284 (INFO) - Pada 2d09b4c2-f0e2-48c1-8653-779a39eac117_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:23,284 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.31 detik
+2024-02-29 12:59:23,284 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:24,618 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:24,956 (INFO) - Pada 38272f55-7cc2-4498-bf59-b56248f56c1e_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:24,956 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.34 detik
+2024-02-29 12:59:24,956 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:26,260 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:26,539 (INFO) - Pada bc5e0c5f-058d-4ff1-b5b7-ef62de67f52e_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:26,543 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.28 detik
+2024-02-29 12:59:26,543 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:27,929 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:28,349 (INFO) - Pada d0c8fc25-c0b6-4f18-8558-0c1c16cf1f4f_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:28,349 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.42 detik
+2024-02-29 12:59:28,349 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:29,703 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:30,052 (INFO) - Pada b25646e4-c549-4336-98a1-a99c31f94338_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:30,052 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.35 detik
+2024-02-29 12:59:30,052 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:31,439 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:31,795 (INFO) - Pada 1aeefe33-1ea3-4615-8845-140bc4a4b8b4_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:31,795 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.36 detik
+2024-02-29 12:59:31,795 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:33,182 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:33,567 (INFO) - Pada 39087f65-b724-4f0d-a959-5e9d0b729bb8_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:33,567 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.38 detik
+2024-02-29 12:59:33,567 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:35,023 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:35,386 (INFO) - Pada 79e98230-6aa6-4bc4-88e9-29ec55f07990_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:35,386 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.36 detik
+2024-02-29 12:59:35,386 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:36,829 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:37,215 (INFO) - Pada 0b75ce52-c834-4d8d-a2d6-ffc1796e0381_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:37,215 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.39 detik
+2024-02-29 12:59:37,215 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:38,567 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:38,938 (INFO) - Pada f288d5c8-9ee7-4846-a11d-a7cfe16e3e53_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:38,938 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.37 detik
+2024-02-29 12:59:38,938 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:40,338 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:40,667 (INFO) - Pada cd322b14-aa5e-437c-8ed4-68d7d93d0dfb_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:40,667 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.33 detik
+2024-02-29 12:59:40,667 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:41,958 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:42,267 (INFO) - Pada a9ebcbe2-c47e-4e14-80d1-4dfc27ad67ab_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:42,267 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.31 detik
+2024-02-29 12:59:42,267 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:43,706 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:44,032 (INFO) - Pada 376c0454-2fb4-4fdc-9f37-c82da3c4a7f3_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:44,032 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.33 detik
+2024-02-29 12:59:44,032 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:45,356 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:45,678 (INFO) - Pada ffe1f308-3683-40aa-ad3f-5ea4fa932b2d_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:45,678 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.32 detik
+2024-02-29 12:59:45,678 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:47,352 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:47,650 (INFO) - Pada 0cce3d75-1b6d-460f-b280-d1d8cd41dce5_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:47,650 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.30 detik
+2024-02-29 12:59:47,650 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:48,960 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:49,268 (INFO) - Pada 02a5ef63-d9e4-4a6d-9e65-665a5909799a_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:49,268 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.31 detik
+2024-02-29 12:59:49,268 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:53,437 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:53,756 (INFO) - Pada 7dbfbfa1-896c-4dc6-ac4c-1b898a8e8a84_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:53,756 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.32 detik
+2024-02-29 12:59:53,756 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 12:59:55,806 (INFO) - Memulai deteksi (kamera) plat kendaraan pada filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg ...
+2024-02-29 12:59:56,105 (INFO) - Pada 2967b121-5132-44b7-a2ae-b5dff5fef083_ESP_CAPTURE.png terdeteksi 0 plat kendaraan
+2024-02-29 12:59:56,105 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg berjalan selama 0.30 detik
+2024-02-29 12:59:56,105 (INFO) - Deteksi filename:ESP_CAPTURE#####detectorId:33#####location:sulawesiSelatan.jpg selesai.
+2024-02-29 15:07:23,399 (INFO) - Memulai deteksi (kamera) plat kendaraan pada WhatsApp Image 2024-02-29 at 15.05.47(2).png ...
+2024-02-29 15:07:23,908 (INFO) - Pada WhatsApp Image 2024-02-29 at 15.05.47(2).png terdeteksi 1 plat kendaraan
+2024-02-29 15:09:14,758 (INFO) - Tortoise-ORM shutdown
+2024-02-29 15:10:33,701 (INFO) - Tortoise-ORM started, {'default': <tortoise.backends.mysql.client.MySQLClient object at 0x0000026D7DB40EE0>}, {'models': {'Detection': <class 'app.models.detection_model.Detection'>, 'Detector': <class 'app.models.detector_model.Detector'>}}
+2024-02-29 15:10:33,701 (INFO) - Tortoise-ORM generating schema
+2024-02-29 15:10:34,692 (INFO) - Memulai deteksi (kamera) plat kendaraan pada WhatsApp Image 2024-02-29 at 15.05.47(2).png ...
+2024-02-29 15:10:43,783 (INFO) - Pada WhatsApp Image 2024-02-29 at 15.05.47(2).png terdeteksi 1 plat kendaraan
+2024-02-29 15:11:19,598 (INFO) - Plat kendaraan terekognisi: DD:1889:Y 7:02 +23'
+2024-02-29 15:11:19,671 (INFO) - Plat kendaraan DD:1889:Y 7:02 +23' telah divalidasi menjadi DD 1889 Y
+2024-02-29 15:11:19,676 (INFO) - Deteksi WhatsApp Image 2024-02-29 at 15.05.47(2).png berjalan selama 44.98 detik
+2024-02-29 15:11:19,676 (INFO) - Deteksi WhatsApp Image 2024-02-29 at 15.05.47(2).png selesai.
+2024-02-29 15:12:12,919 (INFO) - Memulai deteksi (kamera) plat kendaraan pada WhatsApp Image 2024-02-29 at 15.05.47(1).png ...
+2024-02-29 15:12:18,046 (INFO) - Pada WhatsApp Image 2024-02-29 at 15.05.47(1).png terdeteksi 1 plat kendaraan
+2024-02-29 15:13:01,979 (INFO) - Plat kendaraan terekognisi: DD:2140_:LB:23:2
+2024-02-29 15:13:02,008 (INFO) - Plat kendaraan DD:2140_:LB:23:2 telah divalidasi menjadi DD 2140 LB
+2024-02-29 15:13:02,009 (INFO) - Deteksi WhatsApp Image 2024-02-29 at 15.05.47(1).png berjalan selama 49.09 detik
+2024-02-29 15:13:02,009 (INFO) - Deteksi WhatsApp Image 2024-02-29 at 15.05.47(1).png selesai.

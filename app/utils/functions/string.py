@@ -25,13 +25,16 @@ def get_detector_id(string, delimiter=None):
 
 
 def decode_sent_image(input_string):
-  input_string = input_string.replace(".png", "")
+  input_string = input_string.replace(".png", "").replace(".jpg", "")
 
-  substrings = input_string.split("#####")
+  substrings = input_string.split(SENT_IMAGE_DETECTOR_DELIMITER)
   result_dict = {}
 
   for substring in substrings:
+    try:
       key, value = substring.split(":", 1)
       result_dict[key] = value
+    except:
+      continue
 
   return result_dict

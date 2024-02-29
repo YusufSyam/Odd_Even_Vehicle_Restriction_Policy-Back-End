@@ -2,32 +2,36 @@ import cv2
 import numpy as np
 
 def straightening_image(image):
-    # Temukan tepi gambar
-    edges = cv2.Canny(image, 50, 150, apertureSize=3)
+    try:
+        # Temukan tepi gambar
+        edges = cv2.Canny(image, 50, 150, apertureSize=3)
 
-    # Temukan garis-garis menggunakan transformasi Hough
-    lines = cv2.HoughLines(edges, 1, np.pi / 180, 100)
-    # plt.imshow(edges)
-    # print('/nLines/n', lines)
+        # Temukan garis-garis menggunakan transformasi Hough
+        lines = cv2.HoughLines(edges, 1, np.pi / 180, 100)
+        # plt.imshow(edges)
+        # print('/nLines/n', lines)
 
-    if lines is None:
+        if lines is None:
+            return image, False
+
+        # Temukan sudut rotasi
+        for line in lines:
+            rho, theta = line[0]
+            if np.degrees(theta) > 45 and np.degrees(theta) < 135:
+                rotation_angle = np.degrees(theta) - 90
+                break
+        else:
+            return image, False
+
+        # Rotasi gambar
+        rows, cols = image.shape
+        M = cv2.getRotationMatrix2D((cols / 2, rows / 2), rotation_angle, 1)
+        rotated_img = cv2.warpAffine(image, M, (cols, rows))
+
+        return rotated_img, True
+    
+    except:
         return image, False
-
-    # Temukan sudut rotasi
-    for line in lines:
-        rho, theta = line[0]
-        if np.degrees(theta) > 45 and np.degrees(theta) < 135:
-            rotation_angle = np.degrees(theta) - 90
-            break
-    else:
-        return image, False
-
-    # Rotasi gambar
-    rows, cols = image.shape
-    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), rotation_angle, 1)
-    rotated_img = cv2.warpAffine(image, M, (cols, rows))
-
-    return rotated_img, True
 
 def stretch_vertical(img, height_multiply= 1.5):
     # Dapatkan dimensi asli gambar

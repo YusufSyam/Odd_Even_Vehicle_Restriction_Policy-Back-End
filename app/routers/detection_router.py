@@ -230,8 +230,6 @@ async def upload_manual_detection_file(
     image_info_dict= decode_sent_image(file.filename)
     image_name= f"{image_info_dict['filename']}.png"
     location= image_info_dict['location'] if 'location' in image_info_dict.keys() else None
-    print('image_name',image_name)
-    print('location',location)
     
     save_image(file.file.read(), image_name, TEMPORARY_IMAGE_FOLDER)
 
@@ -296,7 +294,19 @@ async def delete_temp_image(image_path: str):
 # Jadi di sini nanti akan diganti menjadi langsung diproses
 @router.post('/send-image-to-detect/')
 async def send_image_to_detect(imageFile: UploadFile = File(...)):
-    temp_image_name = f'{generate_unique_string()}_{imageFile.filename}'
+    print('imageFile.filename',imageFile.filename)
+    
+    image_info_dict= decode_sent_image(imageFile.filename)
+
+    image_name= f"{image_info_dict['filename']}.png"
+    location= image_info_dict['location'] if 'location' in image_info_dict.keys() else None
+    detector_id= image_info_dict['detectorId'] if 'detectorId' in image_info_dict.keys() else None
+
+    print('image_name',image_name)
+    print('location',location)
+    print('detector_id',detector_id)
+
+    temp_image_name = f'{generate_unique_string()}_{image_name}'
     detector_id= get_detector_id(imageFile.filename)
 
     save_image(imageFile.file.read(), temp_image_name, TEMPORARY_IMAGE_FOLDER)
